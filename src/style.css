@@ -357,7 +357,6 @@ main .section-hero {
 .section-hero img {
   width: 100%;
   height: auto;
-  transform: scaleX(-1);
 }
 
 /***** End Hero Section *****/
