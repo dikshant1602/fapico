@@ -4,8 +4,9 @@
     "name": "Deep Cleaning",
     "category": "Cleaning",
     "price": 1999,
+    "stock": 189,
     "description": "All in one cleaning serives, the best in market at nminimal costs.",
-    "image": "../images/cleaning.jpg"
+    "image": "public/Images/cleaning.jpg"
   },
   {
     "id": 2,
