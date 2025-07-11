@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Deep Cleaning",
+    "category": "Cleaning",
+    "price": 1999,
+    "description": "All in one cleaning serives, the best in market at nminimal costs.",
+    "image": "../images/cleaning.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone",
+    "category": "Mobiles",
+    "brand": "TechGadget",
+    "price": 499.99,
+    "stock": 100,
+    "image": "../images/iphone.png",
+    "description": "Feature-rich smartphone with a 6.2-inch screen, 12MP dual camera, 128GB storage, and a 4000mAh battery."
+  },
+  {
+    "id": 3,
+    "name": "Wireless Headphones",
+    "category": "Audio",
+    "brand": "SoundBeats",
+    "price": 149.99,
+    "stock": 30,
+    "image": "../images/headphone.png",
+    "description": "High-quality wireless headphones with over-ear design, 20 hours of battery life, and a sleek black color."
+  }
+]
