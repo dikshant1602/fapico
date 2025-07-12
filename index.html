@@ -16,7 +16,7 @@
             <marquee behavior="slide" direction="left">One stop solution for your pest problem.</marquee>
           </div> -->
           <div class="marquee">
-            <p>One stop solution for your pest problem</p>
+            <p>Clean. Safe. Pest-free. All your cleaning and pest control needs under one roof.</p>
           </div>
           <!-- <div class="sign_in_up">
             <a href="# ">SIGN IN</a>
@@ -34,6 +34,7 @@
             width="80%"
             height="auto"
             /> 
+            <p>Fapico</p>
           </a>
         </div>
         <nav class="navbar">
@@ -49,7 +50,7 @@
             </li>
             <li class="nav-items">
               <a href="addToCart.html" class="nav-link add-to-cart-button" id="cartValue">
-                <i class="fa-solid fa-cart-shopping"> 0 </i>
+                <i class="fa-sharp fa-solid fa-arrow-trend-up"> Trending</i>
               </a>
             </li>
           </ul>
@@ -66,7 +67,7 @@
                Your Trusted Partner in Pest Control!
             </h1>
             <p class="hero-para">
-              Welcome to Fapico, your ultimate destination for a pest free home! We’re here to ensure pests are gone for good.
+              Welcome to Fapico, we provide reliable pest control solutions for homes and offices, keeping your spaces safe and pest-free all year round. Alongside pest control, we offer a complete range of professional cleaning services — from deep home cleaning to sofa and upholstery care — so you can enjoy a cleaner, healthier environment without the hassle.
             </p>
             <div class="hero-btn">
               <a href="products.html" class="btn">Explore Our Services</a>
@@ -116,7 +117,7 @@
         <div class="div-extra grid grid-two--cols">
           <div class="extra-text">
             <p>Book Now</p>
-            <h3>get and extra 50% off</h3>
+            <h3>Get Amazing Discounts</h3>
             <a href="#">Show now</a>
           </div>
           <div class="extra-img extra-laptop">
@@ -127,21 +128,22 @@
         <div class="div-extra grid grid-two--cols">
           <div class="extra-text">
             <p>Book Now</p>
-            <h3>40% discount on Painting Services</h3>
-            <a href="#">Show now</a>
-          </div>
-          <div class="extra-img">
-            <img src="./public/Images/painting.jpg" alt="" />
-          </div>
-        </div>
-        <div class="div-extra grid grid-two--cols">
-          <div class="extra-text">
-            <p>Book Now</p>
-            <h3>get and extra 30% Cleaning Services</h3>
+            <h3>Get amazing discounts on Cleaning Services</h3>
             <a href="#">Show now</a>
           </div>
           <div class="extra-img">
             <img src="./public/Images/c.jpg" alt="" />
+          </div>
+        </div>
+
+         <div class="div-extra grid grid-two--cols">
+          <div class="extra-text">
+            <p>Stay Tuned</p>
+            <h3>Affordable Painting Services</h3>
+            <a href="#">Coming Soon</a>
+          </div>
+          <div class="extra-img">
+            <img src="./public/Images/painting.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -157,18 +159,18 @@
             <i class="fa-solid fa-truck-fast"></i>
           </div>
           <div class="div-policy-text">
-            <p>worldwide shipping</p>
-            <p>order above $100</p>
+            <p>Fast Services</p>
+            <p>Fast, hassle-free service when you need it most.</p>
           </div>
         </div>
 
         <div class="div-policy">
           <div class="icons">
-            <i class="fa-solid fa-rotate"></i>
+            <i class="fa-solid fa-clipboard-list"></i>
           </div>
           <div class="div-policy-text">
-            <p>Easy 30 Day Returns</p>
-            <p>Back Returns in 7 Days</p>
+            <p>Flexible Scheduling</p>
+            <p>Book at your convenience — we work around your time</p>
           </div>
         </div>
 
@@ -177,8 +179,8 @@
             <i class="fa-solid fa-hand-holding-dollar"></i>
           </div>
           <div class="div-policy-text">
-            <p>money back guarantee</p>
-            <p>guarantee with in 30-Days</p>
+            <p>Affordable Rates</p>
+            <p>Expert services at rates that won’t break the bank</p>
           </div>
         </div>
 
@@ -188,7 +190,7 @@
           </div>
           <div class="div-policy-text">
             <p>Easy Online Support</p>
-            <p>24/7 Any time support</p>
+            <p>Friendly online support whenever you need us</p>
           </div>
         </div>
       </div>
@@ -207,138 +209,114 @@
       </section> 
 
     <!--Start product template section-->
-    <template id="productTemplate">
-      <div class="cards" id="cardValue">
-        <article class="information [card]">
-          <span class="category"></span>
-          <div class="imageContainer">
-            <img class="productImage" src="" alt="" />
-          </div>
-          <h2 class="productName"></h2>
-          <div class="productRating">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-
-          <p class="productDescription"></p>
-
-          <div class="productPriceElement">
-            <p class="productPrice"></p>
-            <p class="productActualPrice"></p>
-          </div>
-
-            <button class="add-to-cart-button">
-              <i class="fa-solid fa-cart-shopping"></i>
-              Book Now</button>
-        </article>
+<template id="productTemplate">
+  <div class="cards" id="cardValue">
+    <article class="information [card]">
+      <span class="category"></span>
+      <div class="imageContainer">
+        <img class="productImage" src="" alt="" />
       </div>
-    </template>
+      <h2 class="productName"></h2>
+      <div class="productRating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <!-- 👇 New span for customer number -->
+        <span class="customerNumber"></span>
+      </div>
+
+      <p class="productDescription"></p>
+
+      <div class="productPriceElement">
+        <p class="productPrice"></p>
+        <p class="productActualPrice"></p>
+      </div>
+
+      <button class="add-to-cart-button">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Book Now
+      </button>
+    </article>
+  </div>
+</template>
+
 
     <!--? ========== Start Why Choose Us Section ========== -->
     <section class="section-why--choose">
-      <div class="container">
-        <h2 class="section-common--heading">Why Choose us</h2>
-        <p class="section-common--subheading">
-          Choose Thapa EduHub for a holistic, enriching learning experience that
-          empowers you to achieve your goals.
+  <div class="container">
+    <h2 class="section-common--heading">Why Choose us</h2>
+    <p class="section-common--subheading">
+      When you choose Fapico, you choose peace of mind, spotless spaces, and a home free of unwanted guests — today, tomorrow, and always.
+    </p>
+  </div>
+
+  <div class="container grid grid-three--cols">
+    <!-- Left Column: 1, 2, 3 -->
+    <div class="choose-left-div">
+      <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="0">
+        <p class="common-text--highlight">1</p>
+        <h3 class="section-common--title">Wide Selection</h3>
+        <p class="section-common">
+          Fapico offers a wide range of services — from thorough cleaning to effective pest control — so you can enjoy a healthier, cleaner lifestyle without hassle.
         </p>
       </div>
 
-      <div class="container grid grid-three--cols">
-        <div class="choose-left-div text-align--right">
-          <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="0">
-            <p class="common-text--highlight">1</p>
-            <h3 class="section-common--title">Wide Selection</h3>
-            <p class="section-common-odd">
-              Thapa Store offers a diverse range of gadgets, from smartphones to
-              smart home devices, ensuring you find what you need to elevate
-              your lifestyle and meet your tech requirements.
-            </p>
-          </div>
-
-          <div
-            class="why-choose--div"
-            data-aos="zoom-in-up"
-            data-aos-delay="300"
-          >
-            <p class="common-text--highlight">2</p>
-            <h3 class="section-common--title">Quality Assurance</h3>
-            <p>
-              Every gadget at Thapa Store undergoes rigorous quality checks,
-              guaranteeing reliability and performance, so you can shop with
-              confidence knowing you're getting the best.
-            </p>
-          </div>
-
-          <div
-            class="why-choose--div"
-            data-aos="zoom-in-up"
-            data-aos-delay="600"
-          >
-            <p class="common-text--highlight">3</p>
-            <h3 class="section-common--title">Competitive Prices</h3>
-            <p>
-              Enjoy great value with Thapa Store's competitive prices on
-              high-quality gadgets, making top-of-the-line technology accessible
-              to all without compromising on quality or performance.
-            </p>
-          </div>
-        </div>
-        <div class="choose-center-div" data-aos="zoom-in" data-aos-delay="300">
-          <figure>
-            <img src="public/Images/image_pest.jpeg" alt="thapa technical home page " />
-          </figure>
-        </div>
-        <div class="choose-right-div">
-          <div
-            class="why-choose--div text-align--left"
-            data-aos="zoom-in-up"
-            data-aos-delay="0"
-          >
-            <p class="common-text--highlight">4</p>
-            <h3 class="section-common--title">Expert Guidance</h3>
-            <p>
-              Our knowledgeable staff provides expert guidance, helping you
-              choose the right gadget to meet your needs and preferences,
-              ensuring you make informed decisions every step of the way.
-            </p>
-          </div>
-
-          <div
-            class="why-choose--div text-align--left"
-            data-aos="zoom-in-up"
-            data-aos-delay="300"
-          >
-            <p class="common-text--highlight">5</p>
-            <h3 class="section-common--title">Convenient Shopping</h3>
-            <p>
-              With Thapa Store, shopping for gadgets is easy and convenient. Our
-              user-friendly website and secure payment options ensure a seamless
-              experience from browsing to checkout, all from the comfort of your
-              home.
-            </p>
-          </div>
-
-          <div
-            class="why-choose--div text-align--left"
-            data-aos="zoom-in-up"
-            data-aos-delay="600"
-          >
-            <p class="common-text--highlight">6</p>
-            <h3 class="section-common--title">Excellent Service</h3>
-            <p>
-              Thapa Store is committed to providing excellent service to our
-              customers. From prompt assistance with inquiries to efficient
-              handling of orders and deliveries, we prioritize your satisfaction
-              every step of the way.
-            </p>
-          </div>
-        </div>
+      <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="300">
+        <p class="common-text--highlight">2</p>
+        <h3 class="section-common--title">Quality Assurance</h3>
+        <p>
+          Every product used at Fapico undergoes rigorous quality checks, guaranteeing reliability and safety, so you can book with confidence knowing you're getting the best.
+        </p>
       </div>
-    </section>
+
+      <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="600">
+        <p class="common-text--highlight">3</p>
+        <h3 class="section-common--title">Competitive Prices</h3>
+        <p>
+          Enjoy great value with Fapico's competitive prices on high-quality services, making top-of-the-line services accessible to all without compromising on quality or performance.
+        </p>
+      </div>
+    </div>
+
+    <!-- Center Image -->
+    <div class="choose-center-div" data-aos="zoom-in" data-aos-delay="300">
+      <figure>
+        <img src="public/Images/image_pest.jpeg" alt="Fapico Services Image" />
+      </figure>
+    </div>
+
+    <!-- Right Column: 4, 5, 6 -->
+    <div class="choose-right-div">
+      <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="0">
+        <p class="common-text--highlight">4</p>
+        <h3 class="section-common--title">Expert Guidance</h3>
+        <p>
+          Our knowledgeable staff provides expert guidance, helping you choose the right service to meet your needs and preferences, ensuring you make informed decisions every step of the way.
+        </p>
+      </div>
+
+      <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="300">
+        <p class="common-text--highlight">5</p>
+        <h3 class="section-common--title">Convenience</h3>
+        <p>
+          With Fapico, finding the right services for you is easy and convenient. Our user-friendly website ensures a seamless experience in browsing, all from the comfort of your home.
+        </p>
+      </div>
+
+      <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="600">
+        <p class="common-text--highlight">6</p>
+        <h3 class="section-common--title">Excellent Service</h3>
+        <p>
+          Fapico is committed to providing excellent service to our customers. From prompt assistance with inquiries to efficient handling of your place, we prioritize your satisfaction every step of the way.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- ========== End   Why Choose Us Section ========== -->
 

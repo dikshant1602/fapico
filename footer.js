@@ -2,26 +2,22 @@ const footerHTML = `
   <footer class="section-footer">
       <div class="footer-container container">
         <div class="content_1">
-          <img src="./images/logo.png" alt="logo" />
+          <img src="public/Images/Fapico.jpg" alt="logo" />
           <p>
-            Welcome to Thapa EcomStore, your ultimate destination for
-            cutting-edge gadgets!
+            Welcome to Fapico, your ultimate destination for
+            best pest control and cleaning services!
           </p>
-          <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="cards" />
         </div>
         <div class="content_2">
-          <h4>SHOPPING</h4>
-          <a href="#">Computer Store</a>
-          <a href="#">Laptop Store</a>
-          <a href="#">Accessories</a>
-          <a href="#">Sales & Discount</a>
+          <h4>Services</h4>
+          <a href="#">Pest Control</a>
+          <a href="#">Deep Cleaning</a>
         </div>
         <div class="content_3">
           <h4>Experience</h4>
           <a href="./contact.html">Contact Us</a>
-          <a href="" target="_blank">Payment Method</a>
-          <a href="" target="_blank">Delivery</a>
-          <a href="" target="_blank">Return and Exchange</a>
+          <a href="" target="_blank">Adress</a>
+          <a href="" target="_blank">Instagram</a>
         </div>
         <div class="content_4">
           <h4>NEWSLETTER</h4>
@@ -35,7 +31,7 @@ const footerHTML = `
       </div>
       <div class="f-design">
         <div class="f-design-txt">
-          <p>Design and Code by Thapa Technical</p>
+          <p>Fapico</p>
         </div>
       </div>
     </footer>`;

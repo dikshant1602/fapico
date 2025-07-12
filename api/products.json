@@ -5,27 +5,26 @@
     "category": "Cleaning",
     "price": 1999,
     "stock": 189,
-    "description": "All in one cleaning serives, the best in market at nminimal costs.",
+    "customerNumber": "100+ Customers ",
+    "description": "All in one cleaning serives, the best in market at minimal costs with industry experts.",
     "image": "public/Images/cleaning.jpg"
   },
   {
     "id": 2,
-    "name": "Smartphone",
-    "category": "Mobiles",
-    "brand": "TechGadget",
-    "price": 499.99,
-    "stock": 100,
-    "image": "../images/iphone.png",
-    "description": "Feature-rich smartphone with a 6.2-inch screen, 12MP dual camera, 128GB storage, and a 4000mAh battery."
+    "name": "General Pest Control",
+    "category": "Pest Control",
+    "price": 4499,
+    "customerNumber": "150+ Customers ",
+    "image": "public/Images/fap_cleaning1.jpeg",
+    "description": "Get rid of all the pests in your home with our professional pest control services."
   },
   {
     "id": 3,
-    "name": "Wireless Headphones",
-    "category": "Audio",
-    "brand": "SoundBeats",
-    "price": 149.99,
-    "stock": 30,
-    "image": "../images/headphone.png",
-    "description": "High-quality wireless headphones with over-ear design, 20 hours of battery life, and a sleek black color."
+    "name": "Commerical Pest Control",
+    "category": "Pest Control",
+    "price": 6999,
+    "customerNumber": "90+ Customers ",
+    "image": "public/Images/pest.jpg",
+    "description": "Get rid of all the pests in your home with our professional pest control services."
   }
 ]

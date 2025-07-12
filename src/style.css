@@ -63,6 +63,37 @@ body {
   font-weight: 700; /* Bolder text */
 }
 
+.navbar-brand a {
+  display: flex; 
+  align-items: center; /* vertically center text with image */
+  text-decoration: none; /* optional: remove underline */
+}
+
+.navbar-brand img {
+  max-width: 50px; /* adjust size as needed */
+  height: auto;
+  margin-right: 10px; /* space between logo and text */
+}
+
+.navbar-brand p {
+  margin: 0; /* remove default paragraph margin */
+  font-size: 24px; /* adjust as needed */
+  color: black; /* optional: your text color */
+}
+
+.productRating {
+  display: flex;
+  align-items: center;
+  font-size: large;
+  gap: 5px; /* space between stars and number */
+}
+
+.customerNumber {
+  font-size: 1.8rem; /* adjust as needed */
+  color: black; /* optional: make it subtle */
+}
+
+
 @keyframes marquee {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
@@ -474,7 +505,7 @@ main {
 }
 
 .div-policy .icons {
-  font-size: 3.2rem;
+  font-size: 4rem;
   color: #00B8A9; /* Teal */
   animation: pulse 2s ease-in-out infinite;
 }
@@ -529,7 +560,53 @@ main {
 
 .why-choose--div .section-common--title {
   margin-top: 1.2rem;
+  font-size: large;
 }
+
+.section-common--title
+.common-text--highlight{
+  text-align: left;
+}
+
+.common-text--highlight {
+  display: inline-block;
+  background-color: #00d9ff;
+  color: #000;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.why-choose--div {
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose--div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section-common--title {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #FF5722;
+}
+
+.choose-left-div, .choose-right-div {
+  text-align: left;
+}
+
+.section-why--choose {
+  padding: 4rem 2rem;
+}
+
+
 
 .choose-center-div, .choose-center-div figure {
   display: flex;
