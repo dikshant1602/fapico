@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Deep Cleaning",
+    "name": "Deep Cleaning Services",
     "category": "Cleaning",
     "price": 1999,
     "stock": 189,
@@ -15,7 +15,7 @@
     "category": "Pest Control",
     "price": 4499,
     "customerNumber": "150+ Customers ",
-    "image": "public/Images/fap_cleaning1.jpeg",
+    "image": "public/Images/S4.jpg",
     "description": "Get rid of all the pests in your home with our professional pest control services."
   },
   {
@@ -24,7 +24,7 @@
     "category": "Pest Control",
     "price": 6999,
     "customerNumber": "90+ Customers ",
-    "image": "public/Images/pest.jpg",
+    "image": "public/Images/S3.jpg",
     "description": "Get rid of all the pests in your home with our professional pest control services."
   }
 ]
