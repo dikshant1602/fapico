@@ -25,7 +25,6 @@ export const showProductContainer = (products) => {
     productClone.querySelector('.productImage').src = image || '/public/Images/placeholder.jpg';
     productClone.querySelector('.productImage').alt = name;
     productClone.querySelector('.customerNumber').textContent = customerNumber;
-    productClone.querySelector('.productStock').textContent = stock ? `Stock: ${stock}` : 'Stock: N/A';
     productClone.querySelector('.productDescription').textContent = description;
     productClone.querySelector('.category').textContent = category;
     productClone.querySelector('.productPrice').textContent = `₹${price}`;
