@@ -39,6 +39,24 @@ body {
   animation: fadeIn 1s ease-in;
 }
 
+/* ... (your existing CSS) ... */
+
+/* Add missing trendingProductContainer styles */
+#trendingProductContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.8rem;
+}
+
+#trendingProductContainer .information {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+
+/* ... (rest of your existing CSS) ... */
+
 @keyframes fadeIn {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -680,14 +698,6 @@ footer {
   animation: fadeIn 1s ease-in;
 }
 
-.footer-container .content_1 img {
-  width: 20rem;
-  max-width: 20rem;
-  max-height: 12rem;
-  object-fit: cover;
-  border: 2px solid var(--main-color);
-}
-
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -761,13 +771,13 @@ footer {
   font-family: "Urbanist", sans-serif;
 }
 
-#productContainer {
+#productContainer, #trendingProductContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4.8rem;
 }
 
-#productContainer .information {
+#productContainer .information, #trendingProductContainer .information {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -834,7 +844,7 @@ footer {
 
 .productPriceElement { margin: 0.8rem 0; }
 
-.productProperty, .productDescription {
+.productProperty, .productDescription, .productStock {
   font-size: 1.6rem;
   font-weight: 600;
   font-family: "Urbanist", sans-serif;
@@ -1054,7 +1064,7 @@ footer {
 
 @media (width <= 980px) {
   body { padding: 0 0.6rem; }
-  .section-products #productContainer { grid-template-columns: repeat(2, minmax(33%, 1fr)); }
+  #productContainer, #trendingProductContainer { grid-template-columns: repeat(2, minmax(33%, 1fr)); }
   .section-hero .hero-heading { font-size: 4.4rem; }
   footer { padding: 0 1.6rem; }
   .footer-container { grid-template-columns: repeat(2, minmax(33%, 1fr)); }
@@ -1082,7 +1092,7 @@ footer {
 @media (width <= 768px) {
   .grid-two--cols, .section-contact .grid-two--cols, .grid-three--cols { grid-template-columns: 1fr; }
   .section-hero .hero-heading { font-size: 4.2rem; }
-  .section-products #productContainer { grid-template-columns: repeat(1, minmax(33%, 1fr)); }
+  #productContainer, #trendingProductContainer { grid-template-columns: repeat(1, minmax(33%, 1fr)); }
   #productCartContainer .card { grid-template-columns: 0.5fr 0.1fr repeat(2, 1fr); }
   .stockElement { grid-column: 1 / 4; }
   .remove-to-cart-button { grid-column: 4 / -1; }

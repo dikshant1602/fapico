@@ -1,36 +1,33 @@
-const productsContainer = document.querySelector('#productContainer');
-const productTemplate = document.querySelector('#productTemplate');
+const trendingProductsContainer = document.querySelector('#trendingProductContainer');
+const trendingProductTemplate = document.querySelector('#trendingProductTemplate');
 
-export const showProductContainer = (products) => {
+export const showTrendingProductContainer = (products) => {
   console.log('Products:', products);
-  if (!products || !productsContainer || !productTemplate) {
+  if (!products || !trendingProductsContainer || !trendingProductTemplate) {
     console.error('Error: Missing products, container, or template', {
       products,
-      productsContainer,
-      productTemplate
+      trendingProductsContainer,
+      trendingProductTemplate
     });
     return false;
   }
 
-  productsContainer.innerHTML = ''; // Clear existing content
+  trendingProductsContainer.innerHTML = ''; // Clear existing content
 
   products.forEach((currProd, index) => {
     console.log(`Processing product ${index}:`, currProd);
     const { category, description, id, image, name, price, customerNumber, stock } = currProd;
 
-    const productClone = document.importNode(productTemplate.content, true);
+    const productClone = document.importNode(trendingProductTemplate.content, true);
     console.log('Cloned template:', productClone);
 
     productClone.querySelector('.productName').textContent = name;
     productClone.querySelector('.productImage').src = image || '/public/Images/placeholder.jpg';
     productClone.querySelector('.productImage').alt = name;
     productClone.querySelector('.customerNumber').textContent = customerNumber;
-    productClone.querySelector('.productStock').textContent = stock ? `Stock: ${stock}` : 'Stock: N/A';
     productClone.querySelector('.productDescription').textContent = description;
     productClone.querySelector('.category').textContent = category;
-    productClone.querySelector('.productPrice').textContent = `₹${price}`;
-    productClone.querySelector('.productActualPrice').textContent = `₹${price * 2}`;
 
-    productsContainer.append(productClone);
+    trendingProductsContainer.append(productClone);
   });
 };

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Office Cleaning Services",
+    "category": "Cleaning",
+    "customerNumber": "100+ Customers ",
+    "description": "All in one cleaning serives, the best in market at minimal costs with industry experts.",
+    "image": "public/Images/cleaning.jpg"
+  },
+  {
+    "id": 2,
+    "name": "General Pest Control",
+    "category": "Pest Control",
+    "customerNumber": "150+ Customers ",
+    "image": "public/Images/S4.jpg",
+    "description": "Get rid of all the pests in your home with our professional pest control services."
+  },
+  {
+    "id": 3,
+    "name": "Commerical Pest Control",
+    "category": "Pest Control",
+    "customerNumber": "90+ Customers ",
+    "image": "public/Images/S3.jpg",
+    "description": "Get rid of all the pests in your home with our professional pest control services."
+  },
+    {
+    "id": 4,
+    "name": "Deep Cleaning Services",
+    "category": "Cleaning",
+    "customerNumber": "100+ Customers ",
+    "description": "All in one cleaning serives, the best in market at minimal costs with industry experts.",
+    "image": "public/Images/cleaning.jpg"
+  },
+  {
+    "id": 5,
+    "name": "General Pest Control",
+    "category": "Pest Control",
+    "customerNumber": "150+ Customers ",
+    "image": "public/Images/S4.jpg",
+    "description": "Get rid of all the pests in your home with our professional pest control services."
+  },
+  {
+    "id": 6,
+    "name": "Commerical Pest Control",
+    "category": "Pest Control",
+    "customerNumber": "90+ Customers ",
+    "image": "public/Images/S3.jpg",
+    "description": "Get rid of all the pests in your home with our professional pest control services."
+  },
+    {
+    "id": 7,
+    "name": "Deep Cleaning Services",
+    "category": "Cleaning",
+    "customerNumber": "100+ Customers ",
+    "description": "All in one cleaning serives, the best in market at minimal costs with industry experts.",
+    "image": "public/Images/cleaning.jpg"
+  },
+  {
+    "id": 8,
+    "name": "General Pest Control",
+    "category": "Pest Control",
+    "customerNumber": "150+ Customers ",
+    "image": "public/Images/S4.jpg",
+    "description": "Get rid of all the pests in your home with our professional pest control services."
+  },
+  {
+    "id": 9,
+    "name": "Commerical Pest Control",
+    "category": "Pest Control",
+    "customerNumber": "90+ Customers ",
+    "image": "public/Images/S3.jpg",
+    "description": "Get rid of all the pests in your home with our professional pest control services."
+  }
+]
