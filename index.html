@@ -182,15 +182,24 @@
     </section>
 
     <!-- Product Section -->
-    <section class="section-product">
+    <!-- <section class="section-product">
       <div class="container">
         <h2 class="section-common--heading">Checkout Our Services</h2>
         <div id="productContainer"></div>
       </div>
-    </section>
+    </section> -->
+    <section class="section-product">
+  <div class="container">
+    <h2 class="section-common--heading">Checkout Our Services</h2>
+    <div id="productContainer">
+      <!-- Fallback content -->
+      <p class="fallback-message">Loading services... If content does not appear, please check your connection or contact support.</p>
+    </div>
+  </div>
+</section>
 
     <!-- Product Template -->
-    <template id="productTemplate">
+    <!-- <template id="productTemplate">
       <div class="cards" id="cardValue">
         <article class="information [card]">
           <span class="category"></span>
@@ -218,7 +227,36 @@
           </button>
         </article>
       </div>
-    </template>
+    </template> -->
+    <template id="productTemplate">
+  <div class="cards">
+    <article class="information card">
+      <span class="category"></span>
+      <div class="imageContainer">
+        <img class="productImage" src="" alt="Service Image" loading="lazy" />
+      </div>
+      <h2 class="productName"></h2>
+      <div class="productRating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <span class="customerNumber"></span>
+      </div>
+      <p class="productDescription"></p>
+      <p class="productStock"></p>
+      <div class="productPriceElement">
+        <p class="productPrice"></p>
+        <p class="productActualPrice"></p>
+      </div>
+      <button class="add-to-cart-button">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <a href="https://wa.me/918700828054" target="_blank">Book Now</a>
+      </button>
+    </article>
+  </div>
+</template>
 
     <!-- Why Choose Us Section -->
     <section class="section-why--choose">
