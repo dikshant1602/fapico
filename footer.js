@@ -4,8 +4,8 @@ const footerHTML = `
         <div class="content_1">
           <img src="public/Images/Fapico.jpg" alt="logo" />
           <p>
-            Welcome to Fapico, your ultimate destination for
-            best pest control and cleaning services!
+            Welcome to Fapico, your ultimate destination<br>
+            for best pest control and cleaning services!
           </p>
         </div>
         <div class="content_2">

@@ -1,126 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
-
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>About Page</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Fapico - About</title>
   </head>
   <body>
-    <!-- ========== Start Navbar ========== -->
-
     <header class="section-navbar">
       <section class="top_txt">
         <div class="head container">
-          <div class="head_txt">
-            <marquee>Welcome to Fapico. One Stop soultion for your pest problem.</marquee>
+          <div class="marquee">
+            <p>Clean. Safe. Pest-free. All your cleaning and pest control needs under one roof.</p>
           </div>
-          <!-- <div class="sing_in_up">
-            <a href="# ">SIGN IN</a>
-            <a href="# ">SIGN UP</a>
-          </div> -->
         </div>
       </section>
-      <!--? ## Step 1: Don't Forget To LIKE SHARE & SUBSCRIBE TO THAPA TECHNCIAL YOUTUBE CHANNEL 👉 https://www.youtube.com/thapatechnical -->
       <div class="container">
         <div class="navbar-brand">
-          <a href="index.html">
+          <a href="/index.html">
             <img
-              src="public/Images/Fapico.jpg"
-              alt="thapa eCommerce logo"
+              src="/public/Images/Fapico.jpg"
+              alt="Fapico Logo"
               class="logo"
               width="80%"
               height="auto"
             />
+            <p>Fapico</p>
           </a>
         </div>
         <nav class="navbar">
           <ul>
-            <li class="nav-item">
-              <a href="/" class="nav-link">Home </a>
+            <li class="nav-items">
+              <a href="/index.html" class="nav-link">Home</a>
             </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">about</a>
+            <li class="nav-items">
+              <a href="/about.html" class="nav-link">About</a>
             </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">contact</a>
+            <li class="nav-items">
+              <a href="/contact.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-items">
+              <a href="/trending.html" class="nav-link add-to-cart-button" id="cartValue">
+                <i class="fa-sharp fa-solid fa-arrow-trend-up"> Trending</i>
+              </a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-    <!-- ========== End Navbar ========== -->
-    <!-- ========== Start About Section ========== -->
-    <section class="section-contact">
+
+    <!-- Policy Section -->
+    <section class="section-policy">
+      <div class="container grid grid-four--cols">
+        <div class="div-policy">
+          <div class="icons">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div class="div-policy-text">
+            <p>Fast Services</p>
+            <p>Fast, hassle-free service when you need it most.</p>
+          </div>
+        </div>
+        <div class="div-policy">
+          <div class="icons">
+            <i class="fa-solid fa-clipboard-list"></i>
+          </div>
+          <div class="div-policy-text">
+            <p>Flexible Scheduling</p>
+            <p>Book at your convenience — we work around your time</p>
+          </div>
+        </div>
+        <div class="div-policy">
+          <div class="icons">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <div class="div-policy-text">
+            <p>Affordable Rates</p>
+            <p>Expert services at rates that won’t break the bank</p>
+          </div>
+        </div>
+        <div class="div-policy">
+          <div class="icons">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="div-policy-text">
+            <p>Easy Online Support</p>
+            <p>Friendly online support whenever you need us</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-product">
       <div class="container">
-        <h2 class="section-common--heading">Contact Us</h2>
-        <br><br>
-        <p class="section-common--subheading">
-          Welcome to Fapico — your trusted partner for a cleaner, healthier, and pest-free living or working space. <br>
-          At Fapico, we believe a clean environment is not just about appearance — it’s about well-being, comfort, and peace of mind. With a commitment to quality, reliability, and customer satisfaction, we deliver a wide range of professional cleaning and pest control services tailored to meet the unique needs of homes and businesses alike.
-        </p>
-      </div>
-
-      <section class="section-extra-product">
-        <div class="div-extra grid grid-two--cols">
-          <div class="extra-text">
-            <p>Book Now</p>
-            <h3>get and extra 50% off</h3>
-            <a href="#">Show now</a>
+        <h2 class="section-common--heading">About Us</h2>
+        <div id="trendingProductContainer">
+          <div class="cards">
+            <article class="information [card]">
+              <h2 class="productName">Our Story</h2>
+              <p class="productDescription">
+                Founded with a passion for cleanliness and safety, Fapico has been serving communities since 2015. We started as a small team dedicated to providing top-notch cleaning and pest control services, and today, we pride ourselves on being a trusted name across the region. Our journey is driven by a commitment to excellence and customer satisfaction.
+              </p>
+            </article>
           </div>
-          <div class="extra-img extra-laptop">
-            <img src="./public/Images/pest.jpg" alt="" />
+          <div class="cards">
+            <article class="information [card]">
+              <h2 class="productName">Our Mission</h2>
+              <p class="productDescription">
+                At Fapico, our mission is to create healthier living and working environments through innovative cleaning solutions and effective pest management. We aim to deliver affordable, reliable, and eco-friendly services that exceed expectations.
+              </p>
+            </article>
           </div>
-        </div>
-
-        <div class="div-extra grid grid-two--cols">
-          <div class="extra-text">
-            <p>Book Now</p>
-            <h3>40% discount on Painting Services</h3>
-            <a href="#">Show now</a>
-          </div>
-          <div class="extra-img">
-            <img src="./public/Images/painting.jpg" alt="" />
+          <div class="cards">
+            <article class="information [card]">
+              <h2 class="productName">Our Team</h2>
+              <p class="productDescription">
+                Our team consists of highly trained professionals with years of experience in the industry. From expert cleaners to certified pest control specialists, we work together to ensure every job is done with precision and care. Meet our dedicated crew who make Fapico a leader in the field.
+              </p>
+            </article>
           </div>
         </div>
-        <div class="div-extra grid grid-two--cols">
-          <div class="extra-text">
-            <p>Book Now</p>
-            <h3>get and extra 30% Cleaning Services</h3>
-            <a href="#">Show now</a>
-          </div>
-          <div class="extra-img">
-            <img src="./public/Images/c.jpg" alt="" />
-          </div>
       </div>
     </section>
-    </section>
 
-    <!--* ========== Start Footer Section ========== -->
+    <!-- Product Template (unused but kept for consistency) -->
+    <template id="trendingProductTemplate">
+      <div class="cards" id="cardValue">
+        <article class="information [card]">
+          <span class="category"></span>
+          <div class="imageContainer">
+            <img class="productImage" src="" alt="" />
+          </div>
+          <h2 class="productName"></h2>
+          <div class="productRating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span class="customerNumber"></span>
+          </div>
+          <p class="productDescription"></p>
+          <p class="productStock"></p>
+          <div class="productPriceElement">
+            <p class="productPrice"></p>
+            <p class="productActualPrice"></p>
+          </div>
+          <button class="add-to-cart-button">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="https://wa.me/918700828054" target="_blank">Book Now</a>
+          </button>
+        </article>
+      </div>
+    </template>
 
+    <!-- Footer Section -->
     <footer class="section-footer">
-      <script src="footer.js"></script>
+      <script src="/footer.js"></script>
     </footer>
-    <!-- Include the footer JavaScript file -->
 
-    <!--* ========== End Footer Section ========== -->
-
-    <!-- ========== End About Section ========== -->
-
-    <script type="module" src="/main.js"></script>
-
-    <!-- JS SCRIPT  -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
