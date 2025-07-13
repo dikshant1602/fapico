@@ -1,10 +1,8 @@
 import '../src/style.css';
 import { showProductContainer } from '../homeProductCard';
 import { showTrendingProductContainer } from '../trendingProducts';
-import products from '../api/products.json' assert { type: 'json' };
-import trendingProducts from '../api/trending.json' assert { type: 'json' };
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
   const productContainer = document.getElementById('productContainer');
   const path = window.location.pathname;
 
@@ -18,8 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   try {
     if (path.includes('index.html') || path === '/') {
+      const res = await fetch('../api/products.json');
+      if (!res.ok) throw new Error('Failed to fetch products.json');
+      const products = await res.json();
       showProductContainer(products);
     } else if (path.includes('trending.html')) {
+      const res = await fetch('../api/trending.json');
+      if (!res.ok) throw new Error('Failed to fetch trending.json');
+      const trendingProducts = await res.json();
       showTrendingProductContainer(trendingProducts);
     }
   } catch (error) {
