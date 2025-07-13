@@ -3,72 +3,88 @@
     "id": 1,
     "name": "Office Cleaning Services",
     "category": "Cleaning",
-    "customerNumber": "100+ Customers ",
-    "description": "All in one cleaning serives, the best in market at minimal costs with industry experts.",
+    "customerNumber": "100+ Customers",
+    "description": "Complete cleaning solutions for offices including workstations, cabins, washrooms, and common areas to maintain a clean, productive, and welcoming workspace.",
     "image": "public/Images/cleaning.jpg"
   },
   {
     "id": 2,
     "name": "General Pest Control",
     "category": "Pest Control",
-    "customerNumber": "150+ Customers ",
+    "customerNumber": "150+ Customers",
     "image": "public/Images/S4.jpg",
     "description": "Get rid of all the pests in your home with our professional pest control services."
   },
   {
     "id": 3,
-    "name": "Commerical Pest Control",
+    "name": "Commercial Pest Control",
     "category": "Pest Control",
-    "customerNumber": "90+ Customers ",
+    "customerNumber": "90+ Customers",
     "image": "public/Images/S3.jpg",
-    "description": "Get rid of all the pests in your home with our professional pest control services."
+    "description": "Get rid of all the pests in your commercial space with our expert pest control solutions."
   },
-    {
+  {
     "id": 4,
-    "name": "Deep Cleaning Services",
+    "name": "After Interior Cleaning Services",
     "category": "Cleaning",
-    "customerNumber": "100+ Customers ",
-    "description": "All in one cleaning serives, the best in market at minimal costs with industry experts.",
-    "image": "public/Images/cleaning.jpg"
+    "customerNumber": "20+ Customers",
+    "description": "Post-renovation cleanup to remove dust, paint stains, and debris, making your newly designed space move-in ready and pristine.",
+    "image": "public/Images/AfterInteriorCleaning.jpg"
   },
   {
     "id": 5,
-    "name": "General Pest Control",
-    "category": "Pest Control",
-    "customerNumber": "150+ Customers ",
-    "image": "public/Images/S4.jpg",
-    "description": "Get rid of all the pests in your home with our professional pest control services."
+    "name": "Bathroom Cleaning",
+    "category": "Cleaning",
+    "customerNumber": "80+ Customers",
+    "image": "public/Images/bathroom_cleaning.jpg",
+    "description": "Professional deep cleaning of bathrooms, removing stains, hard water marks, and disinfecting all surfaces including tiles, fittings, and floors for a sparkling and hygienic space."
   },
   {
     "id": 6,
-    "name": "Commerical Pest Control",
+    "name": "Cockroach Control",
     "category": "Pest Control",
-    "customerNumber": "90+ Customers ",
-    "image": "public/Images/S3.jpg",
-    "description": "Get rid of all the pests in your home with our professional pest control services."
+    "customerNumber": "45+ Customers",
+    "image": "public/Images/cockroach_cleaning.jpg",
+    "description": "Targeted treatment to eliminate cockroach infestations from kitchens, bathrooms, and other hiding spots, ensuring a pest-free environment."
   },
-    {
+  {
     "id": 7,
-    "name": "Deep Cleaning Services",
+    "name": "Mattress Cleaning Services",
     "category": "Cleaning",
-    "customerNumber": "100+ Customers ",
-    "description": "All in one cleaning serives, the best in market at minimal costs with industry experts.",
-    "image": "public/Images/cleaning.jpg"
+    "customerNumber": "10+ Customers",
+    "description": "Deep cleaning and sanitization of mattresses to remove dust mites, stains, and odors, enhancing sleep hygiene and freshness.",
+    "image": "public/Images/Mattress_cleaning.jpg"
   },
   {
     "id": 8,
-    "name": "General Pest Control",
+    "name": "Mosquito Control",
     "category": "Pest Control",
-    "customerNumber": "150+ Customers ",
-    "image": "public/Images/S4.jpg",
-    "description": "Get rid of all the pests in your home with our professional pest control services."
+    "customerNumber": "120+ Customers",
+    "image": "public/Images/mosquito.jpg",
+    "description": "Effective mosquito control solutions to reduce mosquito breeding and infestation, protecting your home from mosquito-borne diseases."
   },
   {
     "id": 9,
-    "name": "Commerical Pest Control",
+    "name": "Sofa Cleaning",
+    "category": "Cleaning",
+    "customerNumber": "70+ Customers",
+    "image": "public/Images/sofa_cleaning.jpg",
+    "description": "Restore your sofa’s freshness with specialized shampooing and vacuuming to remove dust, stains, and allergens, leaving your upholstery clean and soft."
+  },
+  {
+    "id": 10,
+    "name": "Termite Control",
     "category": "Pest Control",
-    "customerNumber": "90+ Customers ",
-    "image": "public/Images/S3.jpg",
-    "description": "Get rid of all the pests in your home with our professional pest control services."
+    "customerNumber": "35+ Customers",
+    "image": "public/Images/sofa_cleaning.jpg",
+    "description": "Long-lasting termite treatment for homes and wooden structures to prevent damage caused by these silent destroyers."
+  },
+  {
+    "id": 11,
+    "name": "Terrace Cleaning",
+    "category": "Cleaning",
+    "customerNumber": "50+ Customers",
+    "image": "public/Images/terrace_cleaning.jpg",
+    "description": "Removal of dirt, moss, and stains from terrace surfaces, followed by a thorough wash to make your outdoor space clean and usable."
   }
 ]
