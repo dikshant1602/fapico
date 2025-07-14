@@ -1,4 +1,5 @@
 import './style.css';
+import '../footer.js';
 import { showProductContainer } from '../homeProductCard.js';
 import { showTrendingProductContainer } from '../trendingProducts.js';
 
