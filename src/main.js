@@ -1,5 +1,5 @@
-import '../src/style.css';
-import '../footer.js';
+import './style.css';
+import './footer.js';
 import { showProductContainer } from '../homeProductCard.js';
 import { showTrendingProductContainer } from '../trendingProducts.js';
 
@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   const productContainer = document.getElementById('productContainer');
   const path = window.location.pathname;
 
-  // Fallback if container is missing
-  if (!productContainer && (path.includes('index.html') || path === '/')) {
+  // Fallback if container is missing (only for index)
+  if (!productContainer && (path.includes('index') || path === '/')) {
     console.error('Product container not found');
     document.querySelector('.section-product .container').innerHTML += 
       '<p class="fallback-message">Error loading services. Please try again later.</p>';
@@ -16,13 +16,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   try {
-    if (path.includes('index.html') || path === '/') {
-      const res = await fetch('/api/products.json?cacheBust=' + Date.now())
+    if (path.includes('index') || path === '/') {
+      const res = await fetch('/api/products.json?cacheBust=' + Date.now());
 
       if (!res.ok) throw new Error('Failed to fetch products.json');
       const products = await res.json();
       showProductContainer(products);
-    } else if (path.includes('trending.html')) {
+    } 
+    else if (path.includes('trending') || path.includes('trending.html')) {
       const res = await fetch('/api/trending.json?cacheBust=' + Date.now());
       if (!res.ok) throw new Error('Failed to fetch trending.json');
       const trendingProducts = await res.json();
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  // Log device info for debugging
+  // Debug log
   console.log('Device Info:', {
     userAgent: navigator.userAgent,
     screenWidth: window.innerWidth,
