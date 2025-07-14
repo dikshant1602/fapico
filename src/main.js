@@ -1,6 +1,6 @@
 import '../src/style.css';
-import { showProductContainer } from '../homeProductCard';
-import { showTrendingProductContainer } from '../trendingProducts';
+import { showProductContainer } from '../homeProductCard.js';
+import { showTrendingProductContainer } from '../trendingProducts.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const productContainer = document.getElementById('productContainer');
