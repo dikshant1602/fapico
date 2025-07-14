@@ -6,7 +6,7 @@
     "price": 1999,
     "customerNumber": "100+ Customers ",
     "description": "All in one cleaning serives, the best in market at minimal costs with industry experts.",
-    "image": "public/Images/cleaning.jpg"
+    "image": "/Images/cleaning.jpg"
   },
   {
     "id": 2,
@@ -14,7 +14,7 @@
     "category": "Pest Control",
     "price": 4499,
     "customerNumber": "150+ Customers ",
-    "image": "public/Images/S4.jpg",
+    "image": "/Images/S4.jpg",
     "description": "Get rid of all the pests in your home with our professional pest control services."
   },
   {
@@ -23,7 +23,7 @@
     "category": "Pest Control",
     "price": 6999,
     "customerNumber": "90+ Customers ",
-    "image": "public/Images/S3.jpg",
+    "image": "/Images/S3.jpg",
     "description": "Get rid of all the pests in your home with our professional pest control services."
   }
 ]

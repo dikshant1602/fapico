@@ -16,12 +16,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     if (path.includes('index.html') || path === '/') {
-      const res = await fetch('../api/products.json');
+      const res = await fetch('/api/products.json?cacheBust=' + Date.now())
+
       if (!res.ok) throw new Error('Failed to fetch products.json');
       const products = await res.json();
       showProductContainer(products);
     } else if (path.includes('trending.html')) {
-      const res = await fetch('../api/trending.json');
+      const res = await fetch('/api/trending.json?cacheBust=' + Date.now());
       if (!res.ok) throw new Error('Failed to fetch trending.json');
       const trendingProducts = await res.json();
       showTrendingProductContainer(trendingProducts);
