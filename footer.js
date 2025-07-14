@@ -10,10 +10,10 @@ const footerHTML = `
         </div>
         <div class="content_2">
           <h4>Services</h4>
-          <a href="#">Pest Control</a>
-          <a href="#">Commercial Pest Control</a>
-          <a href="#">Deep Cleaning</a>
-          <a href="#">House Cleaning</a>
+          <a href="./trending.html" target="_blank">Pest Control</a>
+          <a href="./trending.html" target="_blank">Commercial Pest Control</a>
+          <a href="./trending.html" target="_blank">Deep Cleaning</a>
+          <a href="./trending.html" target="_blank">House Cleaning</a>
         </div>
         <div class="content_3">
           <h4>Experience</h4>
@@ -26,7 +26,7 @@ const footerHTML = `
         <div class="content_4">
           <h4>E-Mail</h4>
           <p>Feel free to get in touch with us for<br />services, prices & bookings!</p>
-          <a href=""contact@fapico.com>Email-Us:contact@fapico.com</a>
+          <a href="mailto:contact@fapico.com">Email Us: contact@fapico.com</a>
           <hr />
         </div>
       </div>
