@@ -1,7 +1,7 @@
 const footerHTML = `
   <div class="footer-container container">
     <div class="content_1">
-      <img src="./Images/Fapico.jpg" alt="logo" />
+      <img src="public/Images/Fapico.jpg" alt="logo" />
       <p>
         Welcome to Fapico, your ultimate destination<br>
         for best pest control and cleaning services!
