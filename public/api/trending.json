@@ -5,14 +5,14 @@
     "category": "Cleaning",
     "customerNumber": "100+ Customers",
     "description": "Complete cleaning solutions for offices including workstations, cabins, washrooms, and common areas to maintain a clean, productive, and welcoming workspace.",
-    "image": "/Images/cleaning.jpg"
+    "image": "./Images/cleaning.jpg"
   },
   {
     "id": 2,
     "name": "General Pest Control",
     "category": "Pest Control",
     "customerNumber": "150+ Customers",
-    "image": "/Images/S4.jpg",
+    "image": "./Images/S4.jpg",
     "description": "Comphrehensive pest control services to eliminate common household pests like ants, spiders, rodents, lizards and cockroach ensuring a safe and healthy living environment."
   },
   {
@@ -20,7 +20,7 @@
     "name": "Commercial Pest Control",
     "category": "Pest Control",
     "customerNumber": "90+ Customers",
-    "image": "/Images/S3.jpg",
+    "image": "./Images/S3.jpg",
     "description": "Get rid of all the pests in your commercial space with our expert pest control solutions."
   },
   {
@@ -29,14 +29,14 @@
     "category": "Cleaning",
     "customerNumber": "20+ Customers",
     "description": "Post-renovation cleanup to remove dust, paint stains, and debris, making your newly designed space move-in ready and pristine.",
-    "image": "/Images/AfterInteriorCleaning.jpg"
+    "image": "./Images/AfterInteriorCleaning.jpg"
   },
   {
     "id": 5,
     "name": "Bathroom Cleaning",
     "category": "Cleaning",
     "customerNumber": "80+ Customers",
-    "image": "/Images/bathroom_cleaning.jpg",
+    "image": "./Images/bathroom_cleaning.jpg",
     "description": "Professional deep cleaning of bathrooms, removing stains, hard water marks, and disinfecting all surfaces including tiles, fittings, and floors for a sparkling and hygienic space."
   },
   {
@@ -44,7 +44,7 @@
     "name": "Cockroach Control",
     "category": "Pest Control",
     "customerNumber": "45+ Customers",
-    "image": "/Images/cockroach_cleaning.jpg",
+    "image": "./Images/cockroach_cleaning.jpg",
     "description": "Targeted treatment to eliminate cockroach infestations from kitchens, bathrooms, and other hiding spots, ensuring a pest-free environment."
   },
   {
@@ -53,14 +53,14 @@
     "category": "Cleaning",
     "customerNumber": "10+ Customers",
     "description": "Deep cleaning and sanitization of mattresses to remove dust mites, stains, and odors, enhancing sleep hygiene and freshness.",
-    "image": "/Images/Mattress_cleaning.jpg"
+    "image": "./Images/Mattress_cleaning.jpg"
   },
   {
     "id": 8,
     "name": "Mosquito Control",
     "category": "Pest Control",
     "customerNumber": "120+ Customers",
-    "image": "/Images/mosquito.jpg",
+    "image": "./Images/mosquito.jpg",
     "description": "Effective mosquito control solutions to reduce mosquito breeding and infestation, protecting your home from mosquito-borne diseases."
   },
   {
@@ -68,7 +68,7 @@
     "name": "Sofa Cleaning",
     "category": "Cleaning",
     "customerNumber": "70+ Customers",
-    "image": "/Images/sofa_cleaning.jpg",
+    "image": "./Images/sofa_cleaning.jpg",
     "description": "Restore your sofa’s freshness with specialized shampooing and vacuuming to remove dust, stains, and allergens, leaving your upholstery clean and soft."
   },
   {
@@ -76,7 +76,7 @@
     "name": "Termite Control",
     "category": "Pest Control",
     "customerNumber": "35+ Customers",
-    "image": "/Images/sofa_cleaning.jpg",
+    "image": "./Images/sofa_cleaning.jpg",
     "description": "Long-lasting termite treatment for homes and wooden structures to prevent damage caused by these silent destroyers."
   },
   {
@@ -84,7 +84,7 @@
     "name": "Terrace Cleaning",
     "category": "Cleaning",
     "customerNumber": "50+ Customers",
-    "image": "/Images/terrace_cleaning.jpg",
+    "image": "./Images/terrace_cleaning.jpg",
     "description": "Removal of dirt, moss, and stains from terrace surfaces, followed by a thorough wash to make your outdoor space clean and usable."
   }
 ]
