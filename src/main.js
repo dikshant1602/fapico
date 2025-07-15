@@ -1,7 +1,7 @@
-//import './style.css';
+import './style.css';
 import './footer.js';
-import { showProductContainer } from '../homeProductCard.js';
-import { showTrendingProductContainer } from '../trendingProducts.js';
+import { showProductContainer } from './homeProductCard.js';
+import { showTrendingProductContainer } from './trendingProducts.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const productContainer = document.getElementById('productContainer');
