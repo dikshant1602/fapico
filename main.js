@@ -1,5 +1,5 @@
 import { showProductContainer } from "./homeProductCard.js";
-import { showTrendingProductContainer } from "./trendingProduct.js";
+import { showTrendingProductContainer } from "./trendingProducts.js";
 
 // ✅ Use fetch instead of import
 fetch("./public/api/products.json")
