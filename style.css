@@ -8,12 +8,10 @@
   font-family: "Urbanist", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   --buttonColor: #2a2c30;
   --secondaryColor: #4b4f56;
   --borderColor: #e3eaf0;
@@ -296,56 +294,48 @@ main {
 }
 
 .section-hero {
-  height: 60vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   padding: 0;
+  width: 100%;
 }
 
-/* Slideshow specific CSS for fullscreen coverage */
 .slideshow-container-fullscreen {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 50vh;
   overflow: hidden;
   z-index: 1;
 }
 
 .mySlides {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .mySlides img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   object-position: center;
   filter: brightness(0.7) contrast(1.05);
   transition: opacity 1.5s ease-in-out;
+  display: block;
 }
 
-/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 2s;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from { opacity: 0.4; }
+  to { opacity: 1; }
 }
-
-/* End Slideshow specific CSS */
 
 .div-extra {
   padding: 3.2rem 2.4rem;
@@ -631,47 +621,11 @@ input:hover, textarea:hover {
   background-color: var(--buttonColor);
 }
 
-/* In your style.css */
-
 .contact-map {
-  /* This ensures the map container takes full width when grid-two--cols becomes 1fr */
-  width: 100%; 
-  /* Also ensure it aligns well within its grid cell */
-  display: flex;
-  justify-content: center; /* Center the map */
-  align-items: center;
-}
-
-/*
-.contact-map iframe {
-  width: 100%; 
-  max-width: 100%; 
-  height: 45rem; 
-  display: block; 
-  border-radius: 0.5rem; 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-}
-
-*/
-
-/* You already have this for general inputs/textareas, but good to re-check if any specific overrides are happening */
-input, textarea {
   width: 100%;
-  box-sizing: border-box; /* This is crucial for inputs not to overflow due to padding */
-  /* ... other styles ... */
-}
-
-/* Review your .grid-two--cols media query */
-@media (max-width: 768px) {
-  .grid-two--cols {
-    grid-template-columns: 1fr; /* This correctly stacks your form and map */
-  }
-
-  /* Ensure the contact grid specifically follows this */
-  .section-contact .grid-two--cols {
-    grid-template-columns: 1fr;
-    gap: 3.2rem; /* Keep a gap between stacked elements */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
@@ -1040,52 +994,47 @@ footer {
   html {
     font-size: 54%;
   }
-
   :is(.section-why--choose, .section-contact) .grid {
     gap: 6.4rem;
   }
-
   .choose-center-div figure::after {
     width: 46rem;
     height: 46rem;
   }
 }
 
-/* Desktop Styles - Ensure hamburger is hidden and nav is standard */
-@media (min-width: 769px) { /* Adjust this breakpoint if your desktop view starts at a different width */
+@media (min-width: 769px) {
   .section-navbar .navbar {
-    display: flex !important; /* Force display flex for desktop nav */
-    position: static; /* Reset positioning */
-    flex-direction: row; /* Ensure row direction */
-    box-shadow: none; /* Remove shadow */
-    padding: 0; /* Remove padding */
-    transform: translateX(0) !important; /* Ensure no transform on desktop */
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    box-shadow: none;
+    padding: 0;
+    transform: translateX(0) !important;
   }
-
   .section-navbar .navbar ul {
-    flex-direction: row; /* Ensure row direction */
-    align-items: center; /* Align items for desktop */
+    flex-direction: row;
+    align-items: center;
   }
-
   .menu-toggle {
-    display: none !important; /* Hide hamburger on desktop */
-  }
-
-  .close-menu { /* Hide close button on desktop */
     display: none !important;
   }
+  .close-menu {
+    display: none !important;
+  }
+  .slideshow-container-fullscreen {
+    min-height: 60vh;
+    max-height: 100vh;
+  }
 }
-
 
 @media (max-width: 1100px) {
   .grid-four--cols {
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   }
-
   .custom-shape-divider-bottom-1696038172 svg {
     height: 8rem;
   }
-
   .section-why--choose {
     & .choose-left-div {
       order: 2;
@@ -1103,7 +1052,6 @@ footer {
       order: 3;
     }
   }
-
   .section-contact .grid-two--cols {
     grid-template-columns: 2fr 1.5fr;
     gap: 3.2rem;
@@ -1114,23 +1062,15 @@ footer {
   body {
     padding: 0 0.6rem;
   }
-
   .section-products #productContainer {
     grid-template-columns: repeat(2, minmax(33%, 1fr));
   }
-
-  .section-hero {
-    height: 50vh; /* Slightly less height on tablets for better content visibility */
+  .slideshow-container-fullscreen {
+    min-height: 40vh;
   }
-
-  .section-hero .hero-heading {
-    font-size: 4.4rem;
-  }
-
   footer {
     padding: 0 1.6rem;
   }
-
   .footer-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(33%, 1fr));
@@ -1142,80 +1082,60 @@ footer {
       margin-top: 3.2rem;
     }
   }
-
-  main .section-hero {
-    height: 50vh; /* Adjust height for smaller screens */
-  }
 }
 
 @media (max-width: 768px) {
   .grid-two--cols {
     grid-template-columns: 1fr;
   }
-
   .section-contact .grid-two--cols {
     grid-template-columns: 1fr;
   }
-
   .grid-three--cols {
     grid-template-columns: 1fr;
   }
-
-  .section-hero {
-    height: 40vh; /* Adjust height further for mobile to ensure image fits well */
+  .slideshow-container-fullscreen {
+    min-height: 35vh;
   }
-
-  .section-hero .hero-heading {
-    font-size: 4.2rem;
-  }
-
   .section-products #productContainer {
     grid-template-columns: repeat(1, minmax(33%, 1fr));
   }
-
   #productCartContainer .card {
     grid-template-columns: 0.5fr 0.1fr repeat(2, 1fr);
     gap: 3.2rem;
   }
-
   .productQuantity {
     text-align: center;
   }
-
   .stockElement {
     grid-column: 1 / 4;
   }
-
   .remove-to-cart-button {
     grid-column: 4 / -1;
   }
-
   .section-navbar .container {
-    flex-direction: row; /* Keep logo and hamburger side-by-side */
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between; /* Space out logo and hamburger */
+    justify-content: space-between;
   }
-
   .section-navbar .navbar {
     position: fixed;
     top: 0;
-    right: 0; /* Aligned to the right */
-    width: 250px; /* Width of the side menu */
+    right: 0;
+    width: 250px;
     height: 100%;
     background-color: var(--backgroundSecondary);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px 0px;
     z-index: 100;
-    transform: translateX(100%); /* Start hidden off-screen to the right */
+    transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    padding-top: 6rem; /* Adjust padding to make space for the close button */
+    padding-top: 6rem;
   }
-
   .section-navbar .navbar.active {
-    transform: translateX(0); /* Slide into view from the right */
+    transform: translateX(0);
   }
-
   .section-navbar .navbar ul {
     flex-direction: column;
     gap: 0;
@@ -1223,17 +1143,14 @@ footer {
     align-items: flex-start;
     padding: 0;
   }
-
   .section-navbar .navbar ul li {
     width: 100%;
     text-align: left;
     border-bottom: 1px solid var(--borderColor);
   }
-
   .section-navbar .navbar ul li:last-child {
-      border-bottom: none;
+    border-bottom: none;
   }
-
   .section-navbar .navbar ul li a {
     padding: 1.5rem 2.4rem;
     display: block;
@@ -1241,11 +1158,9 @@ footer {
     color: var(--textColor);
     font-size: 1.8rem;
   }
-
   .section-navbar .navbar ul li a:hover {
     background-color: var(--supporting-color);
   }
-
   .menu-toggle {
     display: block;
     cursor: pointer;
@@ -1254,24 +1169,20 @@ footer {
     position: static;
     margin-left: auto;
   }
-
-  /* Styles for the Close Button */
   .close-menu {
-    display: block; /* Show only on mobile */
+    display: block;
     position: absolute;
-    top: 1.5rem; /* Adjust position as needed */
-    right: 2.4rem; /* Align to the right */
-    font-size: 3.5rem; /* Large enough to be easily tappable */
-    color: var(--textColor); /* Color of the cross icon */
+    top: 1.5rem;
+    right: 2.4rem;
+    font-size: 3.5rem;
+    color: var(--textColor);
     cursor: pointer;
-    z-index: 101; /* Ensure it's above other elements in the menu */
+    z-index: 101;
     transition: color 0.3s ease;
   }
-
   .close-menu:hover {
-    color: var(--main-color); /* Highlight on hover */
+    color: var(--main-color);
   }
-
   .section-why--choose {
     & img {
       width: 30%;
@@ -1286,17 +1197,13 @@ footer {
       text-align: left;
     }
   }
-
   .section-contact--homepage .btn {
     display: block;
     text-align: center;
   }
-
   :is(.section-contact--homepage) .container:first-child {
     padding: 6.4rem 0rem 2.4rem 0rem;
   }
-
-  /* Ensure Our Services column is displayed */
   .footer-container .content_2 {
     display: block;
   }
@@ -1306,45 +1213,35 @@ footer {
   html {
     font-size: 52%;
   }
-
-  .section-hero {
-    height: 35vh;
+  .slideshow-container-fullscreen {
+    min-height: 30vh;
   }
-
   .section-hero .hero-heading {
     font-size: 3.2rem;
   }
-
   .section-hero .hero-subheading {
     font-size: 1.4rem;
   }
-
   .btn {
     padding: 1rem 2rem;
     font-size: 1.4rem;
   }
-
   .section-hero img {
     width: 100%;
   }
-
   .navbar-brand p {
     font-size: 2rem;
   }
-
   .navbar-brand img {
     max-width: 40px;
   }
-
   .menu-toggle {
     font-size: 2.4rem;
   }
-
-  .close-menu { /* Adjust close button size for smaller screens */
+  .close-menu {
     font-size: 3rem;
     right: 1.8rem;
   }
-
   .footer-container .content_1 img {
     max-width: 14rem;
   }
