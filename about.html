@@ -19,7 +19,7 @@
       <section class="top_txt">
         <div class="head container">
           <div class="marquee">
-            <p>Clean. Safe. Pest-free. All your cleaning and pest control needs under one roof.</p>
+             <p>Clean. Safe. Pest-Free. Deep Cleaning Services, General Cleaning & Pest Control — All Your Needs Under One Roof. Call Us: <a href="tel:+91-8700828054">+91-8700828054</a></p>
           </div>
         </div>
       </section>
@@ -36,7 +36,8 @@
             <p>Fapico</p>
           </a>
         </div>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
+          <span class="close-menu" id="close-menu">&times;</span>
           <ul>
             <li class="nav-items">
               <a href="/index.html" class="nav-link">Home</a>
@@ -54,10 +55,12 @@
             </li>
           </ul>
         </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
     </header>
 
-    <!-- Policy Section -->
     <section class="section-policy">
       <div class="container grid grid-four--cols">
         <div class="div-policy">
@@ -99,7 +102,6 @@
       </div>
     </section>
 
-    <!-- About Section -->
     <section class="section-product">
       <div class="container">
         <h2 class="section-common--heading">About Us</h2>
@@ -132,42 +134,10 @@
       </div>
     </section>
 
-    <!-- Product Template (unused but kept for consistency) -->
-    <template id="trendingProductTemplate">
-      <div class="cards" id="cardValue">
-        <article class="information [card]">
-          <span class="category"></span>
-          <div class="imageContainer">
-            <img class="productImage" src="" alt="" />
-          </div>
-          <h2 class="productName"></h2>
-          <div class="productRating">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <span class="customerNumber"></span>
-          </div>
-          <p class="productDescription"></p>
-          <p class="productStock"></p>
-          <div class="productPriceElement">
-            <p class="productPrice"></p>
-            <p class="productActualPrice"></p>
-          </div>
-          <button class="add-to-cart-button">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <a href="https://wa.me/918700828054" target="_blank">Book Now</a>
-          </button>
-        </article>
-      </div>
-    </template>
-
-    <!-- Footer Section -->
     <footer class="section-footer">
       <script type="module" src="footer.js"></script>
     </footer>
 
     <script type="module" src="main.js"></script>
-  </body>
+    <script src="navbarToggle.js"></script> </body>
 </html>

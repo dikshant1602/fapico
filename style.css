@@ -197,6 +197,7 @@ a:hover { color: var(--main-color); }
   justify-content: space-between;
   align-items: center;
   padding: 1.8rem;
+  position: relative;
 }
 
 .navbar-brand a {
@@ -264,7 +265,6 @@ a:hover { color: var(--main-color); }
 main {
   height: auto;
   position: relative;
-  /* Removed background-image as slideshow will cover it */
   animation: pulse 10s ease-in-out infinite;
 }
 
@@ -281,7 +281,7 @@ main {
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
-  z-index: 2; /* Ensure the wave is above the slideshow */
+  z-index: 2;
 }
 
 .custom-shape-divider-bottom-1696038172 svg {
@@ -296,13 +296,13 @@ main {
 }
 
 .section-hero {
-  height: 60vh; /* Adjust height as needed to fit the screen */
-  position: relative; /* Important for absolute positioning of slideshow */
-  display: flex; /* Flexbox to center or position content if needed */
+  height: 60vh;
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Hide overflow from images */
-  padding: 0; /* Remove padding to allow full coverage */
+  overflow: hidden;
+  padding: 0;
 }
 
 /* Slideshow specific CSS for fullscreen coverage */
@@ -313,7 +313,7 @@ main {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 1; /* Place below other content like the wave divider */
+  z-index: 1;
 }
 
 .mySlides {
@@ -328,16 +328,16 @@ main {
 .mySlides img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* This is crucial for filling the space completely */
-  object-position: center; /* Ensures the most important part of the image is centered */
-  filter: brightness(0.7) contrast(1.05); /* Slightly darken images for better text readability */
-  transition: opacity 1.5s ease-in-out; /* Smoother fade transition */
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.7) contrast(1.05);
+  transition: opacity 1.5s ease-in-out;
 }
 
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 2s; /* Increased duration for slower fade */
+  animation-duration: 2s;
 }
 
 @keyframes fade {
@@ -631,9 +631,47 @@ input:hover, textarea:hover {
   background-color: var(--buttonColor);
 }
 
+/* In your style.css */
+
 .contact-map {
+  /* This ensures the map container takes full width when grid-two--cols becomes 1fr */
+  width: 100%; 
+  /* Also ensure it aligns well within its grid cell */
   display: flex;
-  justify-content: flex-end;
+  justify-content: center; /* Center the map */
+  align-items: center;
+}
+
+/*
+.contact-map iframe {
+  width: 100%; 
+  max-width: 100%; 
+  height: 45rem; 
+  display: block; 
+  border-radius: 0.5rem; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+}
+
+*/
+
+/* You already have this for general inputs/textareas, but good to re-check if any specific overrides are happening */
+input, textarea {
+  width: 100%;
+  box-sizing: border-box; /* This is crucial for inputs not to overflow due to padding */
+  /* ... other styles ... */
+}
+
+/* Review your .grid-two--cols media query */
+@media (max-width: 768px) {
+  .grid-two--cols {
+    grid-template-columns: 1fr; /* This correctly stacks your form and map */
+  }
+
+  /* Ensure the contact grid specifically follows this */
+  .section-contact .grid-two--cols {
+    grid-template-columns: 1fr;
+    gap: 3.2rem; /* Keep a gap between stacked elements */
+  }
 }
 
 footer {
@@ -1013,6 +1051,32 @@ footer {
   }
 }
 
+/* Desktop Styles - Ensure hamburger is hidden and nav is standard */
+@media (min-width: 769px) { /* Adjust this breakpoint if your desktop view starts at a different width */
+  .section-navbar .navbar {
+    display: flex !important; /* Force display flex for desktop nav */
+    position: static; /* Reset positioning */
+    flex-direction: row; /* Ensure row direction */
+    box-shadow: none; /* Remove shadow */
+    padding: 0; /* Remove padding */
+    transform: translateX(0) !important; /* Ensure no transform on desktop */
+  }
+
+  .section-navbar .navbar ul {
+    flex-direction: row; /* Ensure row direction */
+    align-items: center; /* Align items for desktop */
+  }
+
+  .menu-toggle {
+    display: none !important; /* Hide hamburger on desktop */
+  }
+
+  .close-menu { /* Hide close button on desktop */
+    display: none !important;
+  }
+}
+
+
 @media (max-width: 1100px) {
   .grid-four--cols {
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
@@ -1127,8 +1191,85 @@ footer {
   }
 
   .section-navbar .container {
+    flex-direction: row; /* Keep logo and hamburger side-by-side */
+    align-items: center;
+    justify-content: space-between; /* Space out logo and hamburger */
+  }
+
+  .section-navbar .navbar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Aligned to the right */
+    width: 250px; /* Width of the side menu */
+    height: 100%;
+    background-color: var(--backgroundSecondary);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px 0px;
+    z-index: 100;
+    transform: translateX(100%); /* Start hidden off-screen to the right */
+    transition: transform 0.3s ease-in-out;
+    display: flex;
     flex-direction: column;
-    gap: 3.2rem;
+    padding-top: 6rem; /* Adjust padding to make space for the close button */
+  }
+
+  .section-navbar .navbar.active {
+    transform: translateX(0); /* Slide into view from the right */
+  }
+
+  .section-navbar .navbar ul {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .section-navbar .navbar ul li {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid var(--borderColor);
+  }
+
+  .section-navbar .navbar ul li:last-child {
+      border-bottom: none;
+  }
+
+  .section-navbar .navbar ul li a {
+    padding: 1.5rem 2.4rem;
+    display: block;
+    width: 100%;
+    color: var(--textColor);
+    font-size: 1.8rem;
+  }
+
+  .section-navbar .navbar ul li a:hover {
+    background-color: var(--supporting-color);
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 2.8rem;
+    color: var(--textColor);
+    position: static;
+    margin-left: auto;
+  }
+
+  /* Styles for the Close Button */
+  .close-menu {
+    display: block; /* Show only on mobile */
+    position: absolute;
+    top: 1.5rem; /* Adjust position as needed */
+    right: 2.4rem; /* Align to the right */
+    font-size: 3.5rem; /* Large enough to be easily tappable */
+    color: var(--textColor); /* Color of the cross icon */
+    cursor: pointer;
+    z-index: 101; /* Ensure it's above other elements in the menu */
+    transition: color 0.3s ease;
+  }
+
+  .close-menu:hover {
+    color: var(--main-color); /* Highlight on hover */
   }
 
   .section-why--choose {
@@ -1167,7 +1308,7 @@ footer {
   }
 
   .section-hero {
-    height: 35vh; /* Even shorter height for very small screens */
+    height: 35vh;
   }
 
   .section-hero .hero-heading {
@@ -1191,36 +1332,20 @@ footer {
     font-size: 2rem;
   }
 
-  .section-navbar img {
-    max-width: 14rem;
+  .navbar-brand img {
+    max-width: 40px;
+  }
+
+  .menu-toggle {
+    font-size: 2.4rem;
+  }
+
+  .close-menu { /* Adjust close button size for smaller screens */
+    font-size: 3rem;
+    right: 1.8rem;
   }
 
   .footer-container .content_1 img {
     max-width: 14rem;
-  }
-}
-
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-  font-size: 2.4rem;
-  color: var(--textColor);
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .navbar ul {
-    display: none;
-  }
-
-  .navbar.active ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    text-align: center;
   }
 }
