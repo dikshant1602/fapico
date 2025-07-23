@@ -538,6 +538,101 @@
    animation: circle 5s linear infinite alternate; 
  } 
 
+ /* =========================================
+    Locations Section Styles
+   ========================================= */
+.section-locations {
+    /* This section doesn't need the huge default top padding from its container */
+    padding-top: 0; 
+}
+
+.section-locations .section-common--heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.locations-container {
+  display: grid;
+  /* Creates a responsive grid. It will fit as many 14rem columns as possible. */
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 2.4rem;
+}
+
+.location-card {
+  background-color: var(--backgroundSecondary);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.location-icon-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.location-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--textColor);
+  margin: 0;
+  text-align: center;
+}
+
+/* Add these styles to your existing locations section CSS */
+
+/* Make the card a positioning context for the badge */
+.location-card {
+    position: relative;
+}
+
+/* Style for the "Coming Soon" cards */
+.location-card.coming-soon {
+    cursor: not-allowed; /* Change the cursor to indicate it's not clickable */
+}
+
+/* Make the image and name appear faded */
+.location-card.coming-soon .location-icon-img,
+.location-card.coming-soon .location-name {
+    opacity: 0.4;
+    filter: grayscale(80%); /* Makes the image less vibrant */
+}
+
+/* Remove hover effects for coming-soon cards */
+.location-card.coming-soon:hover {
+    transform: none; /* Disables the card lifting up on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Reverts to the default shadow */
+}
+
+/* The "Coming Soon" badge that appears over the card */
+.status-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* This perfectly centers the badge */
+    background-color: var(--main-color);
+    color: var(--backgroundSecondary);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap; /* Prevents the text from breaking into two lines */
+    z-index: 2; /* Ensures the badge is on top of the faded image */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
  @keyframes circle { 
    0% { background-color: #b3d0ff; } 
    25% { background-color: #80b1ff; } 
