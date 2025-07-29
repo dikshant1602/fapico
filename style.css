@@ -15,7 +15,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --buttonColor: #2a2c30;
-  --secondaryColor: #3a3e44; /* Darkened for better contrast */
+  --secondaryColor: #3a3e44;
   --borderColor: #e3eaf0;
   --backgroundColor: #f7f7f7;
   --backgroundSecondary: #fefefe;
@@ -28,7 +28,7 @@
 
 /* Base HTML and Body */
 html {
-  font-size: 0.625rem; /* 62.5% = 10px for easier rem calculations */
+  font-size: 0.625rem;
   color: var(--textColor);
 }
 
@@ -38,7 +38,7 @@ body {
   min-width: 320px;
   background-color: var(--backgroundColor);
   animation: fadeIn 1s ease-in;
-  will-change: opacity; /* Optimize animation */
+  will-change: opacity;
 }
 
 @keyframes fadeIn {
@@ -1472,7 +1472,6 @@ footer {
   height: 80px;
   margin: 0 2rem;
   object-fit: contain;
-  /* filter: grayscale(100%) brightness(1.2); */
   transition: filter 0.3s ease;
 }
 
@@ -1501,7 +1500,57 @@ footer {
 
 .section-testimonials .section-common--subheading {
   max-width: 100rem;
-  /* margin: 0 auto 3.2rem auto; */
+}
+
+.testimonials-slideshow {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 20px 0;
+}
+
+.testimonials-slideshow-inner {
+  display: inline-flex;
+  align-items: center;
+  animation: scrollTestimonials 20s linear infinite;
+}
+
+.testimonials-slideshow-inner img {
+  width: 18%;
+  height: auto;
+  margin: 0 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--main-color); /* Dark blue border matching #535bf2 */
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+.testimonials-slideshow-inner:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollTestimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive adjustments for testimonials slideshow */
+@media (max-width: 1024px) {
+  .testimonials-slideshow-inner img {
+    width: 28%;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-slideshow-inner img {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-slideshow-inner img {
+    width: 80%;
+  }
 }
 
 .more-reviews-btn-container {
@@ -1531,79 +1580,14 @@ footer {
   font-size: 1.8rem;
 }
 
-.testimonials-grid {
-  gap: 3.2rem;
-}
-
-.testimonial-card {
-  background-color: var(--backgroundSecondary);
-  border-radius: 1rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  padding: 3.2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-.testimonial-header {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.testimonial-img {
-  width: 7rem;
-  height: 7rem;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--main-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.testimonial-name {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--textColor);
-  margin: 0;
-  line-height: 1.2;
-}
-
-.testimonial-rating {
-  color: #FFC107;
-  font-size: 1.6rem;
-  margin-top: 0.5rem;
-}
-
-.testimonial-rating i {
-  margin-right: 0.2rem;
-}
-
-.testimonial-text {
-  font-size: 1.7rem;
-  color: var(--secondaryColor);
-  line-height: 1.7;
-  font-style: italic;
-}
-
 /* Reduced Motion Optimization */
 @media (prefers-reduced-motion: reduce) {
   main,
   .marquee p,
   .choose-center-div figure::before,
   .toast,
-  .div-policy .icons {
+  .div-policy .icons,
+  .testimonials-slideshow-inner {
     animation: none;
   }
 }
@@ -1710,9 +1694,6 @@ footer {
   }
   .contact-container.grid-two--cols {
     grid-template-columns: 1fr;
-  }
-  .testimonials-grid {
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   }
 }
 
@@ -1834,26 +1815,6 @@ footer {
   }
   .footer-container .content_2 {
     display: block;
-  }
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-  .testimonial-card {
-    padding: 2.5rem;
-  }
-  .testimonial-img {
-    width: 6rem;
-    height: 6rem;
-  }
-  .testimonial-name {
-    font-size: 1.8rem;
-  }
-  .testimonial-text {
-    font-size: 1.6rem;
-  }
-  .client-logo-slideshow img {
-    height: 60px;
-    margin: 0 1.5rem;
   }
 }
 
