@@ -1,0 +1,42 @@
+[
+  {
+    "id": "pest_1",
+    "name": "Cockroach Control",
+    "image": "./public/Images/pest-cockroach.jpg",
+    "description": "Effective cockroach treatment for homes and offices.",
+    "price": 1200,
+    "category": "Pest Control",
+    "customerNumber": "4.8 (120)",
+    "stock": 10
+  },
+  {
+    "id": "pest_2",
+    "name": "Termite Control",
+    "image": "./public/Images/pest-termite.jpg",
+    "description": "Long-lasting termite protection and removal.",
+    "price": 2500,
+    "category": "Pest Control",
+    "customerNumber": "4.9 (85)",
+    "stock": 5
+  },
+  {
+    "id": "pest_3",
+    "name": "Mosquito & Fly Control",
+    "image": "./public/Images/pest-mosquito.jpg",
+    "description": "Safe and eco-friendly solutions to get rid of flying pests.",
+    "price": 800,
+    "category": "Pest Control",
+    "customerNumber": "4.7 (205)",
+    "stock": 20
+  },
+  {
+    "id": "pest_4",
+    "name": "Service Coming Soon",
+    "image": "./public/Images/placeholder.jpg",
+    "description": "A new pest service is coming soon!",
+    "price": 0,
+    "category": "Pest Control",
+    "customerNumber": "N/A",
+    "stock": 0
+  }
+]

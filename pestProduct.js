@@ -1,12 +1,13 @@
-// homeProductCard.js
+// pestProduct.js
 
-const productsContainer = document.querySelector('#productContainer');
+const productsContainer = document.querySelector('#pestProductContainer');
 const productTemplate = document.querySelector('#productTemplate');
 
-export const showProductContainer = (products) => {
-  console.log('Products:', products);
+export const showPestProductContainer = (products) => {
+  console.log('Pest Products:', products);
+
   if (!products || !productsContainer || !productTemplate) {
-    console.error('Error: Missing products, container, or template', {
+    console.error('Error: Missing pest products, container, or template', {
       products,
       productsContainer,
       productTemplate
@@ -16,12 +17,10 @@ export const showProductContainer = (products) => {
 
   productsContainer.innerHTML = ''; // Clear existing content
 
-  products.forEach((currProd, index) => {
-    console.log(`Processing product ${index}:`, currProd);
+  products.forEach((currProd) => {
     const { category, description, id, image, name, price, customerNumber, stock } = currProd;
 
     const productClone = document.importNode(productTemplate.content, true);
-    console.log('Cloned template:', productClone);
 
     productClone.querySelector('.productName').textContent = name;
     productClone.querySelector('.productImage').src = image || '/public/Images/placeholder.jpg';
@@ -31,7 +30,7 @@ export const showProductContainer = (products) => {
     productClone.querySelector('.category').textContent = category;
     productClone.querySelector('.productPrice').textContent = `₹${price}`;
     productClone.querySelector('.productActualPrice').textContent = `₹${price * 2}`;
-    
+
     // Update the link to navigate to the details page within the details folder
     productClone.querySelector('.more-details-link').href = `details/details.html?id=${id}`;
 

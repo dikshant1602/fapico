@@ -25,5 +25,14 @@
     "customerNumber": "90+ Customers ",
     "image": "./public/Images/S3.jpg",
     "description": "Get rid of all the pests in your home with our professional pest control services."
+  },
+    {
+    "id": 4,
+    "name": "Commerical Pest Control",
+    "category": "Pest Control",
+    "price": 6999,
+    "customerNumber": "90+ Customers ",
+    "image": "./public/Images/S3.jpg",
+    "description": "Get rid of all the pests in your home with our professional pest control services."
   }
 ]

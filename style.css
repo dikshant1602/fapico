@@ -916,13 +916,22 @@ footer {
 }
 
 /* Product Containers */
-#productContainer, #trendingProductContainer {
+#productContainer, #trendingProductContainer, #pestProductContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
   gap: 4.8rem;
 }
 
-#productContainer .information, #trendingProductContainer .information {
+#productContainer, #pestProductContainer {
+  /* This forces 4 columns for both cleaning and pest services on large screens */
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#trendingProductContainer {
+  /* This uses the auto-fill layout for trending services */
+  grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
+}
+
+#productContainer .information, #trendingProductContainer .information, #pestProductContainer .information {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -1520,7 +1529,7 @@ footer {
   margin: 0 10px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid var(--main-color); /* Dark blue border matching #535bf2 */
+  border: 2px solid var(--main-color);
   box-sizing: border-box;
   object-fit: cover;
 }
@@ -1672,7 +1681,7 @@ footer {
   body {
     padding: 0 0.6rem;
   }
-  .section-products #productContainer {
+  .section-products #productContainer, .section-products #trendingProductContainer, .section-products #pestProductContainer {
     grid-template-columns: repeat(2, minmax(33%, 1fr));
   }
   .slideshow-container-fullscreen {
@@ -1706,7 +1715,7 @@ footer {
   .slideshow-container-fullscreen {
     min-height: 35vh;
   }
-  .section-products #productContainer {
+  .section-products #productContainer, .section-products #trendingProductContainer, .section-products #pestProductContainer {
     grid-template-columns: repeat(1, minmax(33%, 1fr));
   }
   #productCartContainer .card {
