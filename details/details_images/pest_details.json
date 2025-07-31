@@ -17,8 +17,8 @@
       "Follow-up visits for complete eradication."
     ],
     "galleryImages": [
-      "https://images.unsplash.com/photo-1596541223963-324545d9e1f5?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1589820296156-f40c752766f7?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "../public/details_images/pest_cockroach_gallery1.jpg",
+      "../public/details_images/pest_cockroach_gallery2.jpg"
     ],
     "reviews": [
       {"name": "Suresh", "stars": 5, "comment": "Cockroaches are gone! Very effective."},
@@ -43,8 +43,8 @@
       "Post-treatment inspection and warranty."
     ],
     "galleryImages": [
-      "https://images.unsplash.com/photo-1596541223963-324545d9e1f5?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1589820296156-f40c752766f7?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "../public/details_images/pest_termite_gallery1.jpg",
+      "../public/details_images/pest_termite_gallery2.jpg"
     ],
     "reviews": [
       {"name": "Mohan", "stars": 5, "comment": "Termite issue resolved completely. Highly recommend!"},
@@ -69,8 +69,8 @@
       "Advice on preventive measures."
     ],
     "galleryImages": [
-      "https://images.unsplash.com/photo-1596541223963-324545d9e1f5?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1589820296156-f40c752766f7?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "../public/details_images/pest_mosquito_gallery1.jpg",
+      "../public/details_images/pest_mosquito_gallery2.jpg"
     ],
     "reviews": [
       {"name": "Rina", "stars": 4, "comment": "Noticeable reduction in mosquitoes. Happy with the service."},
@@ -95,8 +95,8 @@
       "Identification of potential entry points and advice."
     ],
     "galleryImages": [
-      "https://images.unsplash.com/photo-1596541223963-324545d9e1f5?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "https://images.unsplash.com/photo-1589820296156-f40c752766f7?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "../public/details_images/pest_general_gallery1.jpg",
+      "../public/details_images/pest_general_gallery2.jpg"
     ],
     "reviews": [
       {"name": "Gaurav", "stars": 5, "comment": "Great for general pest issues. Very effective."},
