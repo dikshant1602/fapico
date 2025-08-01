@@ -1,9 +1,9 @@
 import { openServiceModal } from './serviceDetails.js';
 
-const productContainer = document.querySelector("#productContainer");
+const pestControlContainer = document.querySelector("#pestControlContainer");
 const productTemplate = document.querySelector("#productTemplate");
 
-export const showProductContainer = (products) => {
+export const showPestControlContainer = (products) => {
   if (!products) {
     return false;
   }
@@ -22,6 +22,6 @@ export const showProductContainer = (products) => {
         openServiceModal(curProd);
     });
 
-    productContainer.append(productClone);
+    pestControlContainer.append(productClone);
   });
 };

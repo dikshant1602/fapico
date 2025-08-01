@@ -916,106 +916,137 @@ footer {
 }
 
 /* Product Containers */
-#productContainer, #trendingProductContainer, #pestProductContainer {
+#productContainer, #pestControlContainer, #trendingProductContainer {
   display: grid;
-  gap: 4.8rem;
-}
-
-#productContainer, #pestProductContainer {
-  /* This forces 4 columns for both cleaning and pest services on large screens */
-  grid-template-columns: repeat(4, 1fr);
-}
-
-#trendingProductContainer {
-  /* This uses the auto-fill layout for trending services */
-  grid-template-columns: repeat(auto-fill, minmax(33rem, 1fr));
-}
-
-#productContainer .information, #trendingProductContainer .information, #pestProductContainer .information {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3.2rem;
+  padding: 2rem 0;
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 2.5rem;
-  width: 100%;
-  max-width: 36rem;
-  padding: 1.6rem;
-  margin: 1.8vh auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 0.3rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: var(--backgroundSecondary);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cards:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.information.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex-grow: 1;
 }
 
 .category {
   background-color: var(--main-color);
-  padding: 0.3rem 1.2rem;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  border-radius: 10rem;
-  transition: background-color 0.3s ease;
+  color: var(--backgroundSecondary);
+  padding: 0.5rem 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  align-self: flex-start;
   font-weight: 600;
-  font-family: "Urbanist", sans-serif;
 }
 
-.category:hover {
-  background-color: var(--buttonColor);
-  color: var(--backgroundSecondary);
+.imageContainer {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 0.8rem;
 }
 
 .productImage {
   width: 100%;
-  max-width: 32rem;
-  max-height: 32rem;
+  height: 100%;
   object-fit: cover;
   border: 2px solid var(--main-color);
-  filter: brightness(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .productImage:hover {
   transform: scale(1.05);
-  filter: brightness(1.2);
+}
+
+.productName {
+  font-size: 2.2rem;
+  color: var(--textColor);
+  margin: 0.8rem 0;
+  font-family: "Jost", sans-serif;
 }
 
 .productRating {
   display: flex;
   align-items: center;
-  font-size: 1.8rem;
-  gap: 5px;
+  gap: 0.5rem;
   color: #FFC107;
+  font-size: 1.6rem;
 }
 
 .customerNumber {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--secondaryColor);
 }
 
-.productPriceElement, .productQuantityElement, .productStockElement {
+.productDescription {
+  font-size: 1.6rem;
+  color: var(--secondaryColor);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.productStock {
+  font-size: 1.6rem;
+  color: var(--textColor);
+}
+
+.productPriceElement {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.productPrice {
+  font-size: 2rem;
+  color: var(--textColor);
+  font-weight: 700;
+}
+
+.productActualPrice {
+  font-size: 1.6rem;
+  color: var(--secondaryColor);
+  text-decoration: line-through;
+}
+
+.more-details-btn {
+  align-self: stretch;
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 1rem;
+  background-color: var(--main-color);
+  color: var(--backgroundSecondary);
+  border-radius: 0.6rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.more-details-btn:hover {
+  background-color: var(--buttonColor);
+  transform: translateY(-2px);
+}
+
+.productQuantityElement, .productStockElement {
   display: flex;
   gap: 2rem;
   align-items: center;
   text-align: center;
-}
-
-.productPriceElement { margin: 0.8rem 0; }
-
-.productProperty, .productDescription, .productStock {
-  font-size: 1.6rem;
-  font-weight: 600;
-  font-family: "Urbanist", sans-serif;
 }
 
 .stockElement {
@@ -1152,16 +1183,6 @@ footer {
   font-weight: 600;
   font-family: "Urbanist", sans-serif;
 }
-
-.productRating { color: #FFC107; }
-
-.productPrice, .productActualPrice {
-  font-size: 2.2rem;
-  font-weight: 600;
-  font-family: "Urbanist", sans-serif;
-}
-
-.productActualPrice { text-decoration: line-through; }
 
 .productCartTotalElem {
   display: flex;
@@ -1543,6 +1564,125 @@ footer {
   100% { transform: translateX(-50%); }
 }
 
+/* Modal Styles for Service Details */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.modal-content {
+  background-color: var(--backgroundSecondary);
+  margin: auto;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 50rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 1rem; /* Adjusted to move up */
+  right: 2.5rem; /* Moved further right to avoid image overlap */
+  font-size: 3rem; /* Slightly larger for prominence */
+  color: #e74c3c; /* Brighter red for better visibility */
+  font-weight: 700; /* Bold */
+  cursor: pointer;
+  background-color: var(--backgroundSecondary); /* White background */
+  border-radius: 50%; /* Circular shape */
+  width: 4rem; /* Fixed width */
+  height: 4rem; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.close-modal-btn:hover {
+  color: #c0392b; /* Darker red on hover */
+  background-color: #f4f4f4; /* Slightly darker background on hover */
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.modal-img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  border: 2px solid var(--main-color);
+}
+
+.modal-header-text h2 {
+  font-size: 2.4rem;
+  color: var(--textColor);
+  margin: 0;
+}
+
+.modal-header-text p {
+  font-size: 1.6rem;
+  color: var(--secondaryColor);
+}
+
+.modal-body h3 {
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.modal-body p {
+  font-size: 1.6rem;
+  color: var(--secondaryColor);
+  line-height: 1.6;
+}
+
+.modal-price-stock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+}
+
+.modal-price-stock p {
+  font-size: 1.6rem;
+  color: var(--textColor);
+}
+
+.modal-footer {
+  text-align: right;
+}
+
+.modal-footer .btn {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  background-color: #28a745;
+}
+
+.modal-footer .btn:hover {
+  background-color: #218838;
+}
+
 /* Responsive adjustments for testimonials slideshow */
 @media (max-width: 1024px) {
   .testimonials-slideshow-inner img {
@@ -1681,9 +1821,6 @@ footer {
   body {
     padding: 0 0.6rem;
   }
-  .section-products #productContainer, .section-products #trendingProductContainer, .section-products #pestProductContainer {
-    grid-template-columns: repeat(2, minmax(33%, 1fr));
-  }
   .slideshow-container-fullscreen {
     min-height: 40vh;
   }
@@ -1715,8 +1852,8 @@ footer {
   .slideshow-container-fullscreen {
     min-height: 35vh;
   }
-  .section-products #productContainer, .section-products #trendingProductContainer, .section-products #pestProductContainer {
-    grid-template-columns: repeat(1, minmax(33%, 1fr));
+  #productContainer, #pestControlContainer, #trendingProductContainer {
+    grid-template-columns: 1fr;
   }
   #productCartContainer .card {
     grid-template-columns: 0.5fr 0.1fr repeat(2, 1fr);
@@ -1870,5 +2007,12 @@ footer {
   .section-client-logos .section-common--heading {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+  }
+  .modal-content {
+    max-width: 90%;
+    padding: 2rem;
+  }
+  .modal-img {
+    height: 15rem;
   }
 }

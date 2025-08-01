@@ -20,9 +20,7 @@
       <section class="top_txt">
         <div class="head container">
           <div class="marquee">
-            <p>Clean.
-            Safe. Pest-Free. Deep Cleaning Services, General Cleaning & Pest Control — All Your Needs Under One Roof.
-            Call Us: <a href="tel:+91-8700828054">+91-8700828054</a></p>
+            <p>Clean. Safe. Pest-Free. Deep Cleaning Services, General Cleaning & Pest Control — All Your Needs Under One Roof. Call Us: <a href="tel:+91-8700828054">+91-8700828054</a></p>
           </div>
         </div>
       </section>
@@ -63,7 +61,6 @@
         </div>
       </div>
     </header>
-
     <main>
       <section class="section-hero">
         <div class="slideshow-container-fullscreen">
@@ -79,7 +76,6 @@
         </div>
       </section>
     </main>
-
     <section class="section-action-buttons">
       <div class="container grid grid-two--cols">
         <div class="action-card book-now-card">
@@ -95,15 +91,13 @@
           <div class="action-content">
             <h3>Have questions?</h3>
             <p>Chat with us directly on WhatsApp for instant support and quotes.</p>
-            <a href="https://wa.me/918700828054?text=Hi%20Fapico,%20I'd%20like%20to%20inquire%20about%20your%20services."
-            target="_blank" class="action-btn btn-whatsapp-chat">
+            <a href="https://wa.me/918700828054?text=Hi%20Fapico,%20I'd%20like%20to%20inquire%20about%20your%20services." target="_blank" class="action-btn btn-whatsapp-chat">
               <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
             </a>
           </div>
         </div>
       </div>
     </section>
-
     <section class="section-client-logos">
       <div class="container">
         <h2 class="section-common--heading">Our Happy Clients</h2>
@@ -119,42 +113,6 @@
         </div>
       </div>
     </section>
-
-    <section class="section-extra-product">
-      <div class="container grid grid-three--cols">
-        <div class="div-extra grid grid-two--cols">
-          <div class="extra-text">
-            <p>Book Now</p>
-            <h3>Get Amazing Discounts</h3>
-            <a href="/trending.html">Shop Now</a>
-          </div>
-          <div class="extra-img extra-laptop">
-            <img src="public/Images/pest.jpg" alt="Pest Control Service" />
-          </div>
-        </div>
-        <div class="div-extra grid grid-two--cols">
-          <div class="extra-text">
-            <p>Book Now</p>
-            <h3>Get Amazing Discounts on Cleaning Services</h3>
-            <a href="/trending.html">Shop Now</a>
-          </div>
-          <div class="extra-img">
-            <img src="public/Images/c.jpg" alt="Cleaning Service" />
-          </div>
-        </div>
-        <div class="div-extra grid grid-two--cols">
-          <div class="extra-text">
-            <p>Stay Tuned</p>
-            <h3>Affordable Painting Services</h3>
-            <a href="#">Coming Soon</a>
-          </div>
-          <div class="extra-img">
-            <img src="public/Images/painting.jpg" alt="Painting Service" />
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section-policy">
       <div class="container grid grid-four--cols">
         <div class="div-policy">
@@ -195,7 +153,6 @@
         </div>
       </div>
     </section>
-
     <section class="section-locations">
       <div class="container">
         <h2 class="section-common--heading">Currently Serving</h2>
@@ -273,12 +230,17 @@
         </div>
       </div>
     </section>
-
     <section class="section-product">
       <div class="container">
-        <h2 class="section-common--heading">Cleaning Services</h2>
-        <div id="productContainer">
-          <p class="fallback-message">Loading services... If content does not appear, please check your connection or contact support.</p>
+        <h2 class="section-common--heading">Checkout Our Services</h2>
+        <div id="productContainer" class="grid grid-three--cols">
+        </div>
+      </div>
+    </section>
+    <section class="section-product">
+      <div class="container">
+        <h2 class="section-common--heading">Pest Control Service</h2>
+        <div id="pestControlContainer" class="grid grid-three--cols">
         </div>
       </div>
     </section>
@@ -290,37 +252,42 @@
             <img class="productImage" src="" alt="Service Image" loading="lazy" />
           </div>
           <h2 class="productName"></h2>
-          <div class="productRating">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <span class="customerNumber"></span>
-          </div>
-          <p class="productDescription"></p>
-          <p class="productStock"></p>
-          <div class="productPriceElement">
-            <p class="productPrice"></p>
-            <p class="productActualPrice"></p>
-          </div>
-          <button class="add-to-cart-button">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <a class="more-details-link">More Details</a>
-          </button>
+          <button class="btn more-details-btn">More Details</button>
         </article>
       </div>
     </template>
-    
-    <section class="section-product">
-      <div class="container">
-        <h2 class="section-common--heading">Pest Control Services</h2>
-        <div id="pestProductContainer">
-          <p class="fallback-message">Loading services... If content does not appear, please check your connection or contact support.</p>
+    <div id="detailsModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal-btn">&times;</span>
+        <div class="modal-header">
+          <img id="modalImage" src="" alt="Service Image" class="modal-img" />
+          <div class="modal-header-text">
+            <h2 id="modalTitle"></h2>
+            <p id="modalCategory"></p>
+          </div>
+        </div>
+        <div class="modal-body">
+          <h3>Description</h3>
+          <p id="modalDescription"></p>
+          <div class="modal-price-stock">
+            <p id="modalPrice"></p>
+            <p id="modalActualPrice"></p>
+            <p id="modalStock"></p>
+            <p id="modalRating"></p>
+            <p id="modalCustomerNumber"></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a
+            id="modalBookingLink"
+            href="https://wa.me/918700828054"
+            target="_blank"
+            class="btn"
+            >Book Now via WhatsApp</a
+          >
         </div>
       </div>
-    </section>
-
+    </div>
     <section class="section-testimonials">
       <div class="container">
         <h2 class="section-common--heading">What Our Clients Say</h2>
@@ -348,75 +315,9 @@
         </div>
       </div>
     </section>
-
-    <section class="section-why--choose">
-      <div class="container">
-        <h2 class="section-common--heading">Why Choose Us</h2>
-        <p class="section-common--subheading">
-          When you choose Fapico, you choose peace of mind, spotless spaces, and a home free of unwanted guests — today, tomorrow, and always.
-        </p>
-      </div>
-      <div class="container grid grid-three--cols">
-        <div class="choose-left-div">
-          <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="0">
-            <p class="common-text--highlight">1</p>
-            <h3 class="section-common--title">Wide Selection</h3>
-            <p class="section-common">
-              Fapico offers a wide range of services — from thorough cleaning to effective pest control — so you can enjoy a healthier, cleaner lifestyle without hassle.
-            </p>
-          </div>
-          <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="300">
-            <p class="common-text--highlight">2</p>
-            <h3 class="section-common--title">Quality Assurance</h3>
-            <p>
-              Every product used at Fapico undergoes rigorous quality checks, guaranteeing reliability and safety, so you can book with confidence knowing you're getting the best.
-            </p>
-          </div>
-          <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="600">
-            <p class="common-text--highlight">3</p>
-            <h3 class="section-common--title">Competitive Prices</h3>
-            <p>
-              Enjoy great value with Fapico's competitive prices on high-quality services, making top-of-the-line services accessible to all without compromising on quality or performance.
-            </p>
-          </div>
-        </div>
-        <div class="choose-center-div" data-aos="zoom-in" data-aos-delay="300">
-          <figure>
-            <img src="/public/Images/image_pest.jpeg" alt="Fapico Services Image" />
-          </figure>
-        </div>
-        <div class="choose-right-div">
-          <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="0">
-            <p class="common-text--highlight">4</p>
-            <h3 class="section-common--title">Expert Guidance</h3>
-            <p>
-              Our knowledgeable staff provides expert guidance, helping you choose the right service to meet your needs and preferences, ensuring you make informed decisions every step of the way.
-            </p>
-          </div>
-          <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="300">
-            <p class="common-text--highlight">5</p>
-            <h3 class="section-common--title">Convenience</h3>
-            <p>
-              With Fapico, finding the right services for you is easy and convenient.
-              Our user-friendly website ensures a seamless experience in Browse, all from the comfort of your home.
-            </p>
-          </div>
-          <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="600">
-            <p class="common-text--highlight">6</p>
-            <h3 class="section-common--title">Excellent Service</h3>
-            <p>
-              Fapico is committed to providing excellent service to our customers.
-              From prompt assistance with inquiries to efficient handling of your place, we prioritize your satisfaction every step of the way.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <footer class="section-footer">
       <script type="module" src="footer.js"></script>
     </footer>
-
     <script type="module" src="main.js"></script>
     <script src="slideshow.js"></script>
     <script src="navbarToggle.js"></script>

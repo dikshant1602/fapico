@@ -1,0 +1,54 @@
+[
+  {
+    "id": "cs01",
+    "name": "Deep Home Cleaning",
+    "category": "Cleaning",
+    "image": "./public/Images/c.jpg",
+    "price": "2499",
+    "actualPrice": "3999",
+    "description": "A comprehensive top-to-bottom cleaning of your entire home.",
+    "stock": "Available",
+    "rating": 4.9,
+    "customerNumber": 350,
+    "details": "Our most popular service. The Deep Home Cleaning package includes dusting of all surfaces, vacuuming and mopping floors, cleaning of windows, bathrooms, and kitchen. We use professional-grade, eco-friendly chemicals to ensure a spotless and hygienic environment. Ideal for a seasonal refresh or before a special occasion."
+  },
+  {
+    "id": "cs02",
+    "name": "Kitchen Cleaning",
+    "category": "Cleaning",
+    "image": "./public/Images/kitchen-cleaning.jpg",
+    "price": "999",
+    "actualPrice": "1499",
+    "description": "Intensive cleaning for a sparkling and hygienic kitchen.",
+    "stock": "Available",
+    "rating": 4.8,
+    "customerNumber": 275,
+    "details": "This service focuses on making your kitchen spotless. It covers degreasing of stove and chimney, scrubbing of tiles and slab, cleaning of cabinets from the outside, and disinfecting the sink and floor. We ensure every corner of your kitchen is free from grease and grime."
+  },
+  {
+    "id": "cs03",
+    "name": "Bathroom Cleaning",
+    "category": "Cleaning",
+    "image": "./public/Images/bathroom-cleaning.jpg",
+    "price": "799",
+    "actualPrice": "1299",
+    "description": "Thorough cleaning and sanitization of your bathrooms.",
+    "stock": "Available",
+    "rating": 4.8,
+    "customerNumber": 410,
+    "details": "We transform your bathrooms into a clean and sanitary space. This service includes deep cleaning of the toilet, shower, tub, and sink, scrubbing of tiles and grout to remove stains, and cleaning of mirrors and fixtures until they shine. All surfaces are disinfected for complete hygiene."
+  },
+    {
+    "id": "cs04",
+    "name": "Bathroom Cleaning",
+    "category": "Cleaning",
+    "image": "./public/Images/bathroom-cleaning.jpg",
+    "price": "799",
+    "actualPrice": "1299",
+    "description": "Thorough cleaning and sanitization of your bathrooms.",
+    "stock": "Available",
+    "rating": 4.8,
+    "customerNumber": 410,
+    "details": "We transform your bathrooms into a clean and sanitary space. This service includes deep cleaning of the toilet, shower, tub, and sink, scrubbing of tiles and grout to remove stains, and cleaning of mirrors and fixtures until they shine. All surfaces are disinfected for complete hygiene."
+  }
+]

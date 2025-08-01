@@ -1,0 +1,54 @@
+[
+  {
+    "id": "pc01",
+    "name": "General Pest Control",
+    "category": "Pest Control",
+    "image": "./public/Images/pest.jpg",
+    "price": "1499",
+    "actualPrice": "2999",
+    "description": "Comprehensive treatment for cockroaches, ants, and spiders.",
+    "stock": "Available",
+    "rating": 4.8,
+    "customerNumber": 210,
+    "details": "Our General Pest Control service provides a thorough inspection and treatment of your home to eliminate common pests like ants, cockroaches, and silverfish. We use safe, eco-friendly chemicals that are effective against pests but harmless to humans and pets. Service includes a 30-day warranty."
+  },
+  {
+    "id": "pc02",
+    "name": "Termite Control",
+    "category": "Pest Control",
+    "image": "./public/Images/termite.jpg",
+    "price": "4999",
+    "actualPrice": "7999",
+    "description": "Protect your furniture from destructive termites with our specialized treatment.",
+    "stock": "Available",
+    "rating": 4.9,
+    "customerNumber": 155,
+    "details": "Termite infestation can cause serious structural damage. Our anti-termite treatment creates a chemical barrier around your property to prevent termite entry. We offer both pre-construction and post-construction treatments with a multi-year warranty for complete peace of mind."
+  },
+  {
+    "id": "pc03",
+    "name": "Rodent Control",
+    "category": "Pest Control",
+    "image": "./public/Images/rodent.jpg",
+    "price": "1999",
+    "actualPrice": "3499",
+    "description": "Safe and effective solutions to eliminate rats and mice from your premises.",
+    "stock": "Available",
+    "rating": 4.7,
+    "customerNumber": 95,
+    "details": "Our rodent control service is designed to effectively eliminate rats and mice. We use a combination of baiting, trapping, and exclusion techniques to manage the infestation. Our methods are safe for children and pets, ensuring your home remains a healthy environment."
+  },
+    {
+    "id": "pc03",
+    "name": "Rodent Control",
+    "category": "Pest Control",
+    "image": "./public/Images/rodent.jpg",
+    "price": "1999",
+    "actualPrice": "3499",
+    "description": "Safe and effective solutions to eliminate rats and mice from your premises.",
+    "stock": "Available",
+    "rating": 4.7,
+    "customerNumber": 95,
+    "details": "Our rodent control service is designed to effectively eliminate rats and mice. We use a combination of baiting, trapping, and exclusion techniques to manage the infestation. Our methods are safe for children and pets, ensuring your home remains a healthy environment."
+  }
+]
