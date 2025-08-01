@@ -2023,7 +2023,7 @@ footer {
 
 .fapico-scroll-container {
   display: flex;
-  justify-content: center; /* Added to center the content */
+  justify-content: center;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -2038,13 +2038,13 @@ footer {
 .fapico-video-wrapper {
   position: relative;
   flex: 0 0 auto;
-  width: 250px; /* Decreased from 300px to 250px */
-  height: 420px; /* Decreased from 500px to 420px */
+  width: 250px;
+  height: 420px;
   scroll-snap-align: center;
   border-radius: 10px;
   overflow: hidden;
   background: #000;
-  margin: 0 auto; /* Added to center individual wrappers */
+  margin: 0 auto;
 }
 
 .fapico-video-wrapper video {
@@ -2064,4 +2064,46 @@ footer {
   border-radius: 20px;
   cursor: pointer;
   font-size: 14px;
+}
+
+/* Mobile View Optimization (max-width: 768px) */
+@media (max-width: 768px) {
+  .fapico-scroll-container {
+    padding: 15px 0 15px 10px; /* Reduced padding for tighter layout */
+    gap: 10px; /* Reduced gap between videos */
+    justify-content: flex-start; /* Allow horizontal scroll with centered items */
+  }
+
+  .fapico-video-wrapper {
+    width: 180px; /* Further reduced width for mobile */
+    height: 300px; /* Adjusted height to maintain aspect ratio */
+    border-radius: 8px; /* Slightly smaller radius for mobile */
+    margin: 0 5px; /* Small margin for spacing */
+  }
+
+  .fapico-video-wrapper video {
+    object-fit: contain; /* Switch to contain to avoid cropping on small screens */
+  }
+
+  .fapico-mute-btn {
+    bottom: 8px; /* Reduced bottom padding */
+    right: 8px; /* Reduced right padding */
+    padding: 6px 10px; /* Smaller padding for button */
+    font-size: 12px; /* Smaller font size */
+    border-radius: 15px; /* Adjusted radius */
+  }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .fapico-video-wrapper {
+    width: 150px; /* Even smaller for very small screens */
+    height: 250px; /* Adjusted height */
+  }
+
+  .fapico-mute-btn {
+    padding: 5px 8px; /* Further reduced padding */
+    font-size: 10px; /* Smaller font */
+    border-radius: 12px; /* Adjusted radius */
+  }
 }
